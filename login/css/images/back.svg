@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Arrow_back_iOS" data-name="Arrow back iOS" class="cls-1" d="M178,0l28,28L106,129,206,229l-27,27L49,129Z"/>
+</svg>

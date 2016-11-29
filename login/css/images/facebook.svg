@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: inherit;
+      }
+    </style>
+  </defs>
+  <path id="Facebook_icono" data-name="Facebook icono" class="cls-1" d="M13,0H243s13.009,0.167,13,14,0,230,0,230-0.179,12.038-13,12-67,0-67,0V160h32l9-41-39-1V97s-1.52-14.692,16-15c0.011,0.033,23,0,23,0V39H178s-43.309-3.061-43,49c0.059,0.156,0,30,0,30H102v44h32v94H12s-12.165-.153-12-13S0,13,0,13-0.075.022,12,0C12.059,0.018,13,0,13,0Z"/>
+</svg>

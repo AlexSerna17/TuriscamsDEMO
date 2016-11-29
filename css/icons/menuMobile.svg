@@ -1,0 +1,11 @@
+<svg id="Otros" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: inherit;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Menú_más_icono" data-name="Menú (más) icono" class="cls-1" d="M35,93A35,35,0,1,1,0,128,35,35,0,0,1,35,93Zm93,0a35,35,0,1,1-35,35A35,35,0,0,1,128,93Zm93,0a35,35,0,1,1-35,35A35,35,0,0,1,221,93Z"/>
+</svg>

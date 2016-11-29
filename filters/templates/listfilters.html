@@ -1,0 +1,121 @@
+<link rel="stylesheet" type="text/css" href="filters/css/filter_style.css"/>
+
+	<div flex="50" >
+      <md-card data-ng-repeat="pic in pics" ng-if="pic.Url != null && $even">
+        <img ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+				{{pic.Name}}
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content class="md-card-content">
+        	<p><strong>{{pic.City}}, {{pic.State}}</strong></p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="center center">
+          	<md-button class="" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="Favorite">
+		       <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
+		    </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+
+   	<div flex="50" >
+      <md-card data-ng-repeat="pic in pics" ng-if="pic.Url != null && $odd">
+        <img ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+				{{pic.Name}}
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content class="md-card-content">
+        	<p><strong>{{pic.City}}, {{pic.State}}</strong></p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="center center">
+         	<md-button class="" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="Favorite">
+		       <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
+		    </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+	
+
+
+
+<!-- <div class="lane-picturelist-AS">
+	<md-card data-ng-repeat="pic in pics" ng-if="pic.Url != null && $even">
+	
+		<md-icon md-svg-src="../libs/css/images/z{{pic.Kind}}.svg" class="icon-img-card-AS"></md-icon>
+		<div class="shaw"></div>
+	
+  	 
+	  	 <a href="#/IETROP/?idcam={{pic._id.$id}}&rutacam=zacatecas&typecam={{pic.Kind}}">
+		 	<img ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" class="md-card-image">
+		 </a>
+	   <div class="coard-content-AS" >
+	   	 <div class="info-content-AS">
+	   	 	{{pic.Name}}<br>
+	   	 	<strong>{{pic.City}}, {{pic.State}}</strong>
+	   	 </div>
+
+	   	 <div class="directive-card-AS" layout="row" layout-align="space-around center">
+	   	 	<rankingdirective idrelation="99" rankingcomp="2"></rankingdirective>	
+	   	 </div>
+	   	
+	   	 <div class="fotter-card-AS">
+	   	 	<md-button class="" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="Favorite">
+		       <md-icon md-svg-icon="../libs/css/images/reservations.svg"></md-icon>
+		       <p>Reservar</p>
+		    </md-button>
+	   	 </div>
+	   </div>
+	</md-card>
+</div>
+<div class="lane-picturelist-AS">
+	<md-card data-ng-repeat="pic in pics" ng-if="pic.Url != null && $odd">
+  	 <md-icon md-svg-src="../libs/css/images/z{{pic.Kind}}.svg" class="icon-img-card-AS"></md-icon>
+		<div class="shaw"></div>
+  	 <a href="#/IETROP/?idcam={{pic._id.$id}}&rutacam=zacatecas&typecam={{pic.Kind}}">
+	 	<img ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" class="md-card-image">
+	 </a>
+	   <div class="coard-content-AS" >
+	   	 <div class="info-content-AS">
+	   	 	{{pic.Name}}<br>
+	   	 	<strong>{{pic.City}}, {{pic.State}}</strong>
+	   	 </div>
+
+	   	 <div class="directive-card-AS" layout="row" layout-align="space-around center">
+	   	 	<rankingdirective idrelation="99" rankingcomp="2"></rankingdirective>
+	   	 </div>
+	   	
+	   	 <div class="fotter-card-AS" layout="colum" layout-align="center none">
+	   	 	<md-button class="" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="Favorite">
+		       <md-icon md-svg-icon="../libs/css/images/reservations.svg"></md-icon>
+		       <p>Reservar</p>
+		     </md-button>
+	   	 </div>
+	   </div>
+	</md-card>
+</div> -->
+
+  
+  	
+<!-- <div class="conten-grid" id="conten-grid" ng-if="error == FALSE" > -->
+	<!-- <ul class="ul-grid" id="nav">
+		<li data-ng-repeat="pic in pics" ng-if="pic.Url != null" class="li-grid" id="li-grid" >
+				<div class="ss-posistionicon">
+					<a href="http://turiscams.com/tkm_public/ietr/?idcam={{pic._id.$id}}&rutacam=zacatecas&typecam={{pic.Kind}}">
+						<img class="img-responsive ss-imageboxlist ss-filters-ietr" ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" >
+					</a>
+				</div>
+				<div class="ss-firttitle">{{pic.Name}}</div>
+				<div class="ss-secondtitle"></div>
+				<div class="ss-stars">
+					<div class="ss-float1"><a href="#" target="_self"><i class="fa fa-heart-o"></i></a></div>
+					<div class="ss-float2"><img src="../filters/images/estrella.png" alt="Estrellas"></div>
+					<div class="ss-float3"><a href="#" target="_self"><i class="fa fa-share-square-o"></i></a></div>
+			  	<div style="clear:both;"><span class="hidden-xs hidden-sm hidden-md hidden-lg">NO BORRAR ESTE DIV</span></div>
+				</div>
+
+		</li>
+	</ul> -->
+<!-- </div> -->

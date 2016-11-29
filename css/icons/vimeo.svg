@@ -1,0 +1,11 @@
+<svg id="Redes_sociales_iconos" data-name="Redes sociales iconos" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: inherit;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Vimeo_icon" data-name="Vimeo icon" class="cls-1" d="M0,77.837S45.039,20.925,82.326,18.067c41.354-1.388,31.467,124.014,57.736,138.75,28.33-9.3,72.532-107.518,6.415-80.048C146.66,76.69,156.486,16.9,217.042,17c110.494,11.415-43.519,221.844-98.364,222-53.336-1.045-60-142.383-81.257-157.961-8.708-4.427-26.729,9.606-26.729,9.606Z"/>
+</svg>

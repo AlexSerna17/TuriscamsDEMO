@@ -51,9 +51,8 @@ p {
 /* Menu */
 
 .menu .bar.bar-header.expanded {
-    /*background-image: url('../img/material-graphite.jpg');*/
     background-image: url('../img/banner_perfil.jpg');
-    background-size: 120%;
+    background-size: 140%;
     background-position: 0%;
     transition: all .5s ease-in-out;
 }

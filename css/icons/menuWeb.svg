@@ -1,0 +1,15 @@
+<svg id="Otros" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+      	fill: inherit;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="menu_web" data-name="menu web">
+    <rect id="Rectángulo_redondeado_1_copia_2" data-name="Rectángulo redondeado 1 copia 2" y="177" width="256" height="32" rx="15" ry="15"/>
+    <rect id="Rectángulo_redondeado_1_copia" data-name="Rectángulo redondeado 1 copia" y="112" width="256" height="32" rx="15" ry="15"/>
+    <rect id="Rectángulo_redondeado_1" data-name="Rectángulo redondeado 1" y="48" width="256" height="32" rx="15" ry="15"/>
+  </g>
+</svg>

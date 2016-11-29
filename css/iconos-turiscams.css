@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'iconos-turiscams';
+  src: url('font/iconos-turiscams.eot?41925331');
+  src: url('font/iconos-turiscams.eot?41925331#iefix') format('embedded-opentype'),
+       url('font/iconos-turiscams.woff2?41925331') format('woff2'),
+       url('font/iconos-turiscams.woff?41925331') format('woff'),
+       url('font/iconos-turiscams.ttf?41925331') format('truetype'),
+       url('font/iconos-turiscams.svg?41925331#iconos-turiscams') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'iconos-turiscams';
+    src: url('../font/iconos-turiscams.svg?41925331#iconos-turiscams') format('svg');
+  }
+}
+*/
+ 
+ [class^="turis-"]:before, [class*=" turis-"]:before {
+  font-family: "iconos-turiscams";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.turis-start:before { content: '\e800'; } /* '' */
+.turis-starthalf:before { content: '\e801'; } /* '' */
+.turis-youtube:before { content: '\e802'; } /* '' */
+.turis-add:before { content: '\e803'; } /* '' */
+.turis-advertiseus:before { content: '\e804'; } /* '' */
+.turis-alert:before { content: '\e805'; } /* '' */
+.turis-archaeologicalsites:before { content: '\e806'; } /* '' */
+.turis-beaches:before { content: '\e80b'; } /* '' */
+.turis-business:before { content: '\e80c'; } /* '' */
+.turis-calendar:before { content: '\e80d'; } /* '' */
+.turis-cameralocation:before { content: '\e80e'; } /* '' */
+.turis-carnivals:before { content: '\e80f'; } /* '' */
+.turis-catalogs:before { content: '\e810'; } /* '' */
+.turis-cel:before { content: '\e811'; } /* '' */
+.turis-cinema:before { content: '\e812'; } /* '' */
+.turis-closeios:before { content: '\e813'; } /* '' */
+.turis-closeweb:before { content: '\e814'; } /* '' */
+.turis-colonialescities:before { content: '\e815'; } /* '' */
+.turis-comments:before { content: '\e816'; } /* '' */
+.turis-computerconsulting:before { content: '\e817'; } /* '' */
+.turis-contactus:before { content: '\e818'; } /* '' */
+.turis-culture:before { content: '\e819'; } /* '' */
+.turis-distribution:before { content: '\e81a'; } /* '' */
+.turis-documentary:before { content: '\e81b'; } /* '' */
+.turis-ecotourism:before { content: '\e81c'; } /* '' */
+.turis-edit:before { content: '\e81d'; } /* '' */
+.turis-email:before { content: '\e81e'; } /* '' */
+.turis-eventsvideos:before { content: '\e81f'; } /* '' */
+.turis-facebook:before { content: '\e820'; } /* '' */
+.turis-facebook-f:before { content: '\e821'; } /* '' */
+.turis-fairsfestivals:before { content: '\e822'; } /* '' */
+.turis-faqs:before { content: '\e823'; } /* '' */
+.turis-favorite:before { content: '\e824'; } /* '' */
+.turis-favoritelight:before { content: '\e825'; } /* '' */
+.turis-heritagecities:before { content: '\e826'; } /* '' */
+.turis-home:before { content: '\e827'; } /* '' */
+.turis-hotel:before { content: '\e828'; } /* '' */
+.turis-iconturiscams:before { content: '\e829'; } /* '' */
+.turis-ietr:before { content: '\e82a'; } /* '' */
+.turis-instagram:before { content: '\e82b'; } /* '' */
+.turis-interestingcamera:before { content: '\e82c'; } /* '' */
+.turis-magictowns:before { content: '\e82d'; } /* '' */
+.turis-menumobile:before { content: '\e82e'; } /* '' */
+.turis-museums:before { content: '\e82f'; } /* '' */
+.turis-music:before { content: '\e830'; } /* '' */
+.turis-nightday:before { content: '\e831'; } /* '' */
+.turis-phone:before { content: '\e832'; } /* '' */
+.turis-phonelight:before { content: '\e833'; } /* '' */
+.turis-pin:before { content: '\e834'; } /* '' */
+.turis-plazas:before { content: '\e835'; } /* '' */
+.turis-professionalphotos:before { content: '\e836'; } /* '' */
+.turis-promoteevent:before { content: '\e837'; } /* '' */
+.turis-registeruser:before { content: '\e838'; } /* '' */
+.turis-religion:before { content: '\e839'; } /* '' */
+.turis-reservations:before { content: '\e83a'; } /* '' */
+.turis-restaurants:before { content: '\e83b'; } /* '' */
+.turis-routes:before { content: '\e83c'; } /* '' */
+.turis-search:before { content: '\e83d'; } /* '' */
+.turis-see:before { content: '\e83e'; } /* '' */
+.turis-share:before { content: '\e83f'; } /* '' */
+.turis-shareios:before { content: '\e840'; } /* '' */
+.turis-sports:before { content: '\e841'; } /* '' */
+.turis-streamings:before { content: '\e842'; } /* '' */
+.turis-termsconditions:before { content: '\e843'; } /* '' */
+.turis-timelapse:before { content: '\e844'; } /* '' */
+.turis-twitter:before { content: '\e845'; } /* '' */
+.turis-unregistered:before { content: '\e846'; } /* '' */
+.turis-userstories:before { content: '\e847'; } /* '' */
+.turis-vimeo:before { content: '\e848'; } /* '' */
+.turis-vine:before { content: '\e849'; } /* '' */
+.turis-web:before { content: '\e84a'; } /* '' */
+.turis-arrowup:before { content: '\e84b'; } /* '' */
+.turis-arrowback:before { content: '\e84c'; } /* '' */
+.turis-arrowdown:before { content: '\e84d'; } /* '' */
+.turis-arrownext:before { content: '\e84e'; } /* '' */

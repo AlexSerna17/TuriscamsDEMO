@@ -1,0 +1,11 @@
+<svg id="Redes_sociales_iconos" data-name="Redes sociales iconos" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: inherit;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Facebook_icon" data-name="Facebook icon" class="cls-1" d="M61.181,92.018h40.155V50.728S100.2-.493,152.121,0C152.441-.009,197,0,197,0V44.83H162.75s-10.713-.851-10.629,10.618,0,35.392,0,35.392H197l-7.086,50.728H152.121V256H100.155V141.567H60V92.018h1.181Z"/>
+</svg>

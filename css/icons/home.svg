@@ -1,0 +1,11 @@
+<svg id="Otros" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+      	fill: inherit;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Home_icono" data-name="Home icono" class="cls-1" d="M235.843,152.2L128,44.3,20.158,152.2H1.008L0,135.059,128,8l48.378,48.4V25.143h31.244V89.681L256,136.067V152.2H235.843Zm-12.095-5.042V248h-63.5V168.336h-64.5v78.656L32.252,248V145.143L128,51.361Z"/>
+</svg>

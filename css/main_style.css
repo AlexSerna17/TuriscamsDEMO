@@ -1,0 +1,51 @@
+
+
+/*MENÙ LATERAL */
+
+/*borde blanco abajo del tabbar*/
+.view-container {
+    position: initial !important;
+}
+
+/*Tamaño del contenedor de perfil*/
+.menu .bar.bar-header.expanded {
+    box-shadow: none;
+    min-height: 199px !important;
+    color: #fff;
+}
+/*Margen debajo del contenedor*/
+.has-expanded-header {
+    top: 199px!important;
+}
+.stable-bg{
+	background: #fff !important;
+	color: #707070 !important;
+}
+/*Color de icono de los items*/
+.item-icon-left .icon {
+    color: #fd9500;
+}
+
+/*links de colores definidos*/
+.link_white{ /*Blanco*/
+	color: #fff;
+	outline: none;
+	text-decoration: none;
+
+}
+
+/*centrado y tamaño de la foto*/
+.menu .avatar {
+    top: 20px;
+    left: 80px;
+    height: 98px;
+    width: 98px;
+}
+
+/*barra de titulo*/
+.bar.bar-turiscams {
+    border-color: #294996;
+    background-color: #294996;
+    background-image: linear-gradient(0deg, #294996, #294996 50%, transparent 50%);
+    color: #fff;
+}

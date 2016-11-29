@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="../filters/css/filter_style.css"/>
+
+
+
+
+      <md-fab-speed-dial md-open="false" md-direction="right" ng-class="demo.selectedMode" style="position: fixed;">
+
+        <md-fab-trigger>
+          <md-button aria-label="menu" class="md-fab md-warn md-mini button-ietr-AS">
+            <md-icon md-svg-src="../libs/css/images/ietr.svg""></md-icon>
+          </md-button>
+        </md-fab-trigger>
+
+        <md-fab-actions >
+          <md-button aria-label="Todas" class="md-fab md-raised md-mini button-ietr-AS" ng-click="changeItem(kind[0], $index)" >
+          	<md-tooltip md-direction="top" md-visible="tooltipVisible">Todas</md-tooltip>
+            <md-icon md-svg-src="../libs/css/images/ietr.svg" ></md-icon>
+          </md-button>
+
+          <md-button data-ng-repeat="options in menu" class="md-fab md-raised md-mini button-ietr-AS" ng-click="changeItem(kind[0]+'/'+options ,$index)">
+			<md-tooltip md-direction="top" md-visible="tooltipVisible">{{options}}</md-tooltip>
+            <md-icon md-svg-src="../libs/css/images/z{{options}}.svg" class="icon-ietr-AS"></md-icon>
+          </md-button>
+        </md-fab-actions>
+
+      </md-fab-speed-dial>
+
+
+
+<!-- <div class="col-xs-12 SS-menuScroll">
+		<div class="SS-menuContent" >
+	    	<a role="button"  ng-click="changeItem(kind[0], $index)"  class="SS-btn" ng-class="{'menuactive': $index == selected, 'SS-buttonMagenta': $index != selected}">
+	            <img src="../filters/images/ietr.png" class="img-icon"><br>
+	            Todas
+	        </a>
+	 		
+
+	 		
+	        <a role="button" data-ng-repeat="options in menu" ng-click="changeItem(kind[0]+'/'+options ,$index)" class="SS-btn " ng-class="{'menuactive': $index == selected, 'SS-buttonMagenta': $index != selected}">
+		        <img src="../filters/images/{{options}}.png" class="img-icon"><br>
+	            {{options}}
+	        </a>
+	    </div>
+	</div> -->
+
+	<!-- ng-class="{'menuactive': activetab == '/IETR', 'SS-buttonMagenta': activetab != '/IETR'}" -->

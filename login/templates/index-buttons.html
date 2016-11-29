@@ -1,0 +1,40 @@
+<div class="container-button">
+	<div class="login-button-group">
+		<!-- <div ng-controller="facebookCtrl"> -->
+			
+			<button class="btn btn_fb_login btn-block" onclick="facebook();">
+				<!-- <i class="fa fa-facebook-official icon_btn_login pull-left" aria-hidden="true"></i>  -->
+				<md-icon md-svg-src="./login/css/images/facebook.svg" class="icon_btn_login"></md-icon>
+				<label>Entrar con Facebook</label>
+			</button>
+			
+		<!-- </div> -->
+	</div>
+	<div class="login-button-group">
+		<button ng-click='loadDirective("user-login", "Iniciar sesión");' class="btn btn_tkm_login btn-block">
+			<!-- <i class="fa fa-video-camera icon_btn_login pull-left" aria-hidden="true"></i>
+			 -->
+			 <md-icon md-svg-src="./login/css/images/turiscams.svg" class="icon_btn_login_turiscams"></md-icon>
+			<label>Ingresar con cuenta <img src="login/css/images/logo.png" class="img-button"></label>
+		</button>
+	</div>
+
+	<div class="login-button-group">
+		<button ng-click='loadDirective("user-signup" , "Registro");' class="btn btn_register_login btn-block">
+			<!-- <i class="fa fa-user-plus icon_btn_login pull-left" aria-hidden="true"></i> -->
+			<md-icon md-svg-src="./login/css/images/register.svg" class="icon_btn_login"></md-icon>
+			<label>¡Regístrate ahora!</label>
+		</button>
+	</div>
+	<div class="login-button-group">
+		<a href="home/index.html">
+			<button  class="btn btn_pass_login btn-block">
+				<!-- <i class="fa fa-times icon_btn_login pull-left" aria-hidden="true"></i> -->
+				<md-icon md-svg-src="./login/css/images/registerOut.svg" class="icon_btn_login"></md-icon>
+				<label>Continuar sin registrar</label>
+			</button>
+		</a>
+	</div>
+</div>
+<!-- <button ng-click='loadDirective("user-signup");'>Registro</button> -->
+<!-- <button>Continuar</button> -->

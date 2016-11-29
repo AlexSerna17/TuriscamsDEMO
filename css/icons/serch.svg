@@ -1,0 +1,11 @@
+<svg id="Otros" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+      	fill: inherit;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Buscar_icono" data-name="Buscar icono" class="cls-1" d="M176,160l79,78-17,16-80-78M99.5,2A97.5,97.5,0,1,1,2,99.5,97.5,97.5,0,0,1,99.5,2ZM100,16a84,84,0,1,1-84,84A84,84,0,0,1,100,16Z"/>
+</svg>
