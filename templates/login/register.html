@@ -1,0 +1,75 @@
+<ion-view view-title="Registrar">
+    <ion-content class="img_fondo_login" layout="column" layout-align="end center">
+    	<div layout="column" layout-align="center center">
+	        <img src="login/css/images/logo.png" alt="" width="90%">
+	    </div>
+    	<div class="web-dialog-container-signup md-inline-form inputdemoBasicUsage" layout="column" ng-cloak="" >
+
+      	<form class="text-center" ng-submit="register()" name="tkm_register" ng-controller="signupCtrl">
+      	<div class="register-container">
+
+					<md-input-container md-no-float="" class="md-block web-input-orange">
+						<input type="text" name="name" ng-model="name" id="name" placeholder="Nombre" required maxlength="30" />
+						<div ng-messages="tkm_register.name.$error" ng-show="tkm_register.name.$touched || tkm_register.name.$submitted">
+							<div ng-message-exp="['required']">
+								Nombre requerido.
+							</div>
+						</div>
+					</md-input-container>
+
+
+					<md-input-container md-no-float="" class="md-block web-input-orange" flex-gt-sm>
+						<input type="email" name="email" ng-model="email" placeholder="Correo electrónico" required ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/" />		
+						<div ng-messages="tkm_register.email.$error"  ng-show="tkm_register.email.$touched || tkm_register.email.$submitted" multiple="" md-auto-hide="false" style="text-align: center;">
+							<div ng-message="required">
+								Correo electrónico requerido.
+							</div>
+
+							<div ng-message="pattern">
+								Ingresa un correo electrónico válido.
+							</div>
+						</div>
+					</md-input-container>
+
+					<md-input-container md-no-float="" class="md-block web-input-orange">
+						<input type="password" name="password" ng-model="password" placeholder="Contraseña" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/" required minlength="8" maxlength="30" />
+						<div ng-messages="tkm_register.password.$error" ng-show="tkm_register.password.$touched || tkm_register.password.$submitted" multiple="" md-auto-hide="false">
+							<div ng-message="required">
+								Contraseña requerida.
+							</div>
+
+							<div ng-message="pattern">
+								Ingresa al menos 8 caracteres (letras ynúmeros).  
+							</div>
+						</div>
+					</md-input-container>
+
+					<md-input-container md-no-float="" class="md-block web-input-orange">
+						<input type="password" name="password_conf"  ng-model="password_conf" placeholder="Confirmar contraseña" data-match="password" required minlength="8" maxlength="30">
+						<div ng-messages="tkm_register.password_conf.$error" ng-show="tkm_register.password_conf.$touched || tkm_register.password_conf.$submitted" multiple="" md-auto-hide="false">
+							<div ng-message="required">
+								Contraseña requerida
+							</div>
+							<div ng-message when="match">
+								Las contraseñas no coinciden 
+							</div>
+						</div>
+					</md-input-container>
+
+
+					<fieldset class="standard">
+						<div layout-wrap layout-gt-sm="row" >
+							<div flex-gt-sm="50">
+								<md-checkbox md-no-ink aria-label="" ng-model="conditions"  name="conditions" required>
+									Acepto los <a href="#terms" class="text-terms">Términos y Condiciones.</a>
+								</md-checkbox>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<button type="submit" class="button btn-login button-block btn_pass_login" ng-form-loader="login_details()" ng-disabled="tkm_register.$invalid"><strong>Registrarse</strong></button>
+			</form>
+
+</div>
+    </ion-content>
+</ion-view>

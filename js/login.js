@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var app = angular.module('login', ['ionic', 'ionic-material', 'ngMaterial','ngMessages']);
+var app = angular.module('login', ['ngCookies','ionic', 'ionic-material', 'ngMaterial','ngMessages','validation.match']);
 
 app.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -50,7 +50,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     })
 
     .state('app.resetPass', {
-        url: '/login/resetPass',
+        url: '/login/account/resetPass',
         views: {
             'menuContent': {
                 templateUrl: 'templates/login/resetPass.html',
@@ -59,12 +59,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         }
     })
 
-    .state('app.motion', {
-        url: '/motion',
+    .state('app.register', {
+        url: '/login/register',
         views: {
             'menuContent': {
-                templateUrl: 'templates/motion.html',
-                controller: 'MotionCtrl'
+                templateUrl: 'templates/login/register.html',
+                // controller: 'signupCtrl'
             }
         }
     })

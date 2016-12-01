@@ -2,30 +2,30 @@ angular.module('login')
 
 
 
-.service('loginService3',function($http, $cookies){
+.service('loginService3',function($http, $cookies, $ionicPopup, $timeout){
 	
 	this.resetPassword = function(email){
 	
 		var url = "http://turiscams.com/tkm/v1/users/reset/"+ email;
+		return $http({
+							
+			method : 'GET',
+			url : url
+			}).success(function(response){
+
+				var alertPopup = $ionicPopup.alert({
+					title: 'Hecho',
+					template: 'Te hemos enviado un correo electrónico con tu contraseña',
+					okType: 'button-alerts'
+				}); 							
+			}).error(function(response){
+				var alertPopup = $ionicPopup.alert({
+					title: 'Se ha producido un error',
+					template: 'El correo electrónico no es válido',
+					okType: 'button-alerts'
+				});							
+			}); 
 		
-				$http({
-					
-					method : 'GET',
-					url : url,
-					headers: { 'Content-Type': 'application/json'}
-					}).then(function successCallback(response){
-						
-						console.log(response);
-
-						//alert("Hecho. Te hemos enviado un correo electrónico con tu contraseña");
-						navigator.notification.alert('Te hemos enviado un correo electrónico con tu contraseña',null,'Hecho','Aceptar');
-						document.location.reload();
-						
-					}, function errorCallback(response){
-
-						//alert('El correo electrónico no es valido.');
-						navigator.notification.alert('El correo electrónico no es válido',null,'Se ha producido un error','Aceptar');
-					});	
 		
 	}
 	
@@ -33,3 +33,18 @@ angular.module('login')
 	
 	
 });
+
+// var alertPopup = $ionicPopup.alert({
+// 							title: 'Hecho',
+// 							template: 'Te hemos enviado un correo electrónico con tu contraseña',
+// 							okType: 'button-alerts'
+// 						}); 
+
+
+
+
+// var alertPopup = $ionicPopup.alert({
+// 							title: 'Se ha producido un error',
+// 							template: 'El correo electrónico no es válido',
+// 							okType: 'button-alerts'
+// 						}); 

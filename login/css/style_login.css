@@ -6,10 +6,12 @@ body{
    overflow-x: hidden;
 }
 #img_logo_login{
-	max-height: 210px;
+    width: 90%;
+    padding-bottom: 45%;
+	/*max-height: 210px;
     margin: 144px 0px 0px 0px;
     max-width: 88%;
-    height: auto;
+    height: auto;*/
 }
 #img_logo_register{
 	max-height: 100px;
@@ -200,14 +202,14 @@ div.form-group a {
     min-height: 224px;
     border-radius: 5px;
     padding: 15px 12px 0px 12px;
-    margin: 30px 0px 10px 0px;
+    margin: 23% 0px 10px 0px;
 }
 .login-container{
     background: #fff;
     min-height: 146px;
     border-radius: 5px;
-    padding: 15px 12px 0px 12px;
-    margin: 111px 0px 10px 0px;
+    padding: 11px 12px 0px 12px;
+    /*margin*/: 111px 0px 10px 0px;
 }
 .reset-container{
     background: #fff;

@@ -1,6 +1,6 @@
 angular.module('login')
 
-.service('loginService2',function($http, $cookies,$q){
+.service('loginService2',function($http, $cookies,$q,$ionicPopup, $timeout){
 	
 	this.login = function(username,password){
 	
@@ -23,7 +23,7 @@ angular.module('login')
 							};
 							
 								$cookies.putObject('user_data', user_data, {path: "/"});
-								location.href = "home/index.html"
+								location.href = "home.html"
 								//return response;
 								
 							}).error(function(response){
@@ -31,7 +31,12 @@ angular.module('login')
 								console.log(password);
 								//window.alert('El correo electrónico o contraseña son incorrectos','Hola','Acepetar');
 								//console.error('Gists error', response.status, response.data);
-								navigator.notification.alert('El correo electrónico o contraseña no son correctos',null,'Se ha producido un error','Aceptar');
+								var alertPopup = $ionicPopup.alert({
+							     title: 'Se ha producido un error',
+							     template: 'El correo electrónico o contraseña no son correctos',
+							     okType: 'button-alerts'
+							   }); 
+								// e27635 navigator.notification.alert('El correo electrónico o contraseña no son correctos',null,'Se ha producido un error','Aceptar');
 							}); 
 							
 		

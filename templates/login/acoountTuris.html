@@ -1,48 +1,53 @@
 <ion-view view-title="Iniciar Sesiòn">
-    <ion-content class="img_fondo_login" layout="column" layout-align="end none">
-    	<form class="text-center" ng-submit="login_details()" name="login_tkm" novalidate>
-						<div class="login-container" >
-
-							<md-input-container md-no-float="" class="md-block web-input-orange" flex-gt-sm>
-								<input type="email" name="email" ng-model="email" placeholder="Correo electrónico" required ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/" />	
-								<div ng-messages="login_tkm.email.$error"  ng-show="login_tkm.email.$touched || login_tkm.email.$submitted" multiple="" md-auto-hide="false" style="text-align: center;">
-									<div ng-message="required">
-										Correo electrónico requerido.
-									</div>
-
-									<div ng-message="pattern">
-										Ingresa un correo electrónico válido.
-									</div>
-								</div>
-							</md-input-container>
-
-							<md-input-container md-no-float="" class="md-block web-input-orange">
-								<input type="{{inputType}}" name="password" ng-model="password" placeholder="Contraseña" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/" required minlength="8" maxlength="30" />
-								<div ng-messages="login_tkm.password.$error" ng-show="login_tkm.password.$touched || login_tkm.password.$submitted" multiple="" md-auto-hide="false">
-									<div ng-message="required">
-										Contraseña requerida.
-									</div>
-
-									<div ng-message="pattern">
-										Ingresa al menos 8 caracteres (letras y números).  
-									</div>
-								</div>
-							</md-input-container>
-
-							<br>
-							<fieldset class="standard">
-								<div layout-wrap layout-gt-sm="row" >
-									<div flex-gt-sm="50">
-										<md-checkbox md-no-ink aria-label="" ng-model="passwordCheckbox" ng-click="hideShowPassword()">
-											Mostrar contraseña</a>
-										</md-checkbox>
-									</div>
-								</div>
-							</fieldset>
+    <ion-content class="img_fondo_login" layout="column" layout-align="end center">
+    	<div layout="column" layout-align="center center">
+	        <img src="login/css/images/logo.png" alt="" id="img_logo_login">
+	    </div>
+    	<div layout-align="end stretch">
+    		<form class="text-center" ng-submit="login_details()" name="login_tkm" novalidate ng-controller="loginCtrl ">
+			<div class="login-container" >
+				<md-input-container md-no-float="" class="md-block web-input-orange" flex-gt-sm>
+					<input type="email" name="email" ng-model="email" placeholder="Correo electrónico" required ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/" />	
+					<div ng-messages="login_tkm.email.$error"  ng-show="login_tkm.email.$touched || login_tkm.email.$submitted" multiple="" md-auto-hide="false" style="text-align: center;">
+						<div ng-message="required">
+							Correo electrónico requerido.
 						</div>
-						<button type="submit" class="button btn-login button-block btn_pass_login" ng-form-loader="login_details()" ng-disabled="login_tkm.$invalid"><strong>Iniciar sesión</strong></button>
-						<a href="#/app/login/resetPass" class="text-white">¿Olvidaste tu contraseña?</strong></a>
-					</form>
-       
+
+						<div ng-message="pattern">
+							Ingresa un correo electrónico válido.
+						</div>
+					</div>
+				</md-input-container>
+
+				<md-input-container md-no-float="" class="md-block web-input-orange">
+					<input type="{{inputType}}" name="password" ng-model="password" placeholder="Contraseña" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/" required minlength="8" maxlength="30" />
+					<div ng-messages="login_tkm.password.$error" ng-show="login_tkm.password.$touched || login_tkm.password.$submitted" multiple="" md-auto-hide="false">
+						<div ng-message="required">
+							Contraseña requerida.
+						</div>
+
+						<div ng-message="pattern">
+							Ingresa al menos 8 caracteres (letras y números).  
+						</div>
+					</div>
+				</md-input-container>
+
+
+				<fieldset class="standard">
+					<div layout-wrap layout-gt-sm="row" >
+						<div flex-gt-sm="50">
+							<md-checkbox md-no-ink aria-label="" ng-model="passwordCheckbox" ng-click="hideShowPassword()">
+								Mostrar contraseña</a>
+							</md-checkbox>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<button type="submit" class="button btn-login button-block btn_pass_login" ng-form-loader="login_details()" ng-disabled="login_tkm.$invalid"><strong>Iniciar sesión</strong></button>
+			<a href="#/app/login/account/resetPass" class="text-white">¿Olvidaste tu contraseña?</strong></a>
+		</form>
+    		
+		</div>
+    	
     </ion-content>
 </ion-view>

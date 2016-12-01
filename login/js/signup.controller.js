@@ -37,7 +37,6 @@ angular.module('login')
 		
 		// Verify that the password match and terms are acepted to proceed with the sign up.
 		if($scope.pass == 1 && $scope.con == 1){
-			
 			loginService.signup($scope.email, $scope.password, $scope.name);
 			
 		}

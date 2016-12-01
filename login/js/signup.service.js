@@ -2,7 +2,7 @@ angular.module('login')
 
 
 
-.service('loginService',function($http, $cookies){
+.service('loginService',function($http, $cookies,$ionicPopup, $timeout){
 	
 	this.signup = function(email, password, name){
 		
@@ -35,12 +35,17 @@ angular.module('login')
 							
 								$cookies.putObject('user_data', user_data, {path: "/"});
 
-								location.href = "home/index.html"
+								location.href = "home.html"
 								
 							}, function errorCallback(response){
 
 								//alert('El usuario ya existe.');
-								navigator.notification.alert('Este correo electrónico ya está registrado',null,'Se ha producido un error','Aceptar');
+								// navigator.notification.alert('Este correo electrónico ya está registrado',null,'Se ha producido un error','Aceptar');
+								var alertPopup = $ionicPopup.alert({
+							     title: 'Se ha producido un error',
+							     template: 'Este correoe electrònico ya esta registrado',
+							     okType: 'button-alerts'
+							   });  
 							});	
 				
 			
