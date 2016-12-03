@@ -1,0 +1,126 @@
+
+<md-dialog aria-label="Tèrminos y condiciones" ng-controller="termsCtrl">
+    <md-toolbar>
+      <div class="md-toolbar-tools-modal" ng-if="user == true">
+        <span flex></span>
+        <md-button  class="md-icon-button" ng-click="cancel()"><strong>OK</strong></md-button>
+      </div>
+
+      <div class="md-toolbar-tools" ng-if="user == false">
+        <md-button class="text-header-icon" ng-click="cancel()">
+          <md-icon md-svg-icon="../libs/css/images/angle-left.svg"></md-icon>
+          Volver
+        </md-button>
+        <div class="content-img-header">
+            <img src="../libs/css/images/logo.png" class="img-logo-header" alt="" style="width: 110px">
+        </div>
+
+        <md-button class="md-icon-button button-with-text" aria-label="More">
+          <md-icon md-svg-icon="../libs/css/images/phone-outline.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar> 
+    <md-dialog-content>
+      <div class="header-tittle">
+        Contáctanos
+      </div>
+      <div class="md-dialog-content" ng-controller="contactCtrl">
+        <form name="contactForm" ng-submit="contactUs()">
+
+            <div layout="row" layout-align="center center" class="tittleFormMore">
+              ¡Síguenos!
+            </div>
+            
+            <md-list ng-cloak>
+                <md-list-item ng-href="https://www.google.com.mx/maps/place/TI+Consulting,+S.C./@22.763801,-102.5502416,19.46z/data=!4m5!3m4!1s0x0:0x864384d9af6d2576!8m2!3d22.76411!4d-102.5505961?hl=es" target="_blank" class="buttonFollow">
+                  <md-icon md-svg-icon="../libs/css/images/home.svg" class="iconFollow"></md-icon>
+                  <p>Avenida universidad #327 Col. Idráulica, Zacatecas, Zacatecas, México</p>
+                </md-list-item>
+
+                <md-list-item ng-click="gola()">
+                  <md-icon md-svg-icon="../libs/css/images/home.svg" class="iconFollow"></md-icon>
+                  <p>contacto@turiscams.com</p>
+                </md-list-item>
+
+                <md-list-item ng-click="gola()">
+                  <md-icon md-svg-icon="../libs/css/images/phone.svg" class="iconFollow"></md-icon>
+                  <p>+ 52 492 132 40 86</p>
+                </md-list-item>
+
+                <md-list-item ng-href="http://turiscams.com/web" target="_blank">
+                  <md-icon md-svg-icon="../libs/css/images/home.svg" class="iconFollow"></md-icon>
+                  <p>www.turiscams.com</p>
+                </md-list-item>
+
+            </md-list>
+
+
+            <section layout="row" layout-align="space-around center">
+
+              <md-button class="md-fab md-facebook md-mini launch" aria-label="Facebook" ng-href="http://facebook.com" target="_blank">
+                  <md-icon md-svg-src="../libs/css/images/facebook-f.svg"></md-icon>
+              </md-button>
+
+              <md-button class="md-fab md-twitter md-mini" aria-label="Twitter" ng-href="http://twitter.com" target="_blank">
+                <md-icon md-svg-src="../libs/css/images/twitter.svg"></md-icon>
+              </md-button>
+
+              <md-button class="md-fab md-instagram md-mini" aria-label="Instagram" ng-href="http://instagram.com" target="_blank">
+                  <md-icon md-svg-src="../libs/css/images/instagram.svg"></md-icon>
+              </md-button>
+
+              <md-button class="md-fab md-youtube md-mini" aria-label="Youtube" ng-href="http://youtube.com" target="_blank">
+                  <md-icon md-svg-src="../libs/css/images/youtube.svg"></md-icon>
+              </md-button>
+
+          </section>
+          <br><br>
+          <div layout="column" layout-align="center center" class="tittleFormMore">
+              ¡Nos interesa mucho tu opinión!
+              <h6>Déjanos tu comentario</h6>
+              {{name}}
+            </div>
+            
+            <md-input-container class="md-block">
+              <label>Nombre</label>
+              <input ng-model="contact.name"  name="name" id="name" required maxlength="30">
+              <div ng-messages="contactForm .name.$error" ng-show="contactForm.name.$touched || contactForm.name.$submitted">
+                  <div ng-message-exp="['required']">
+                    Nombre requerido
+                  </div>
+              </div>
+            </md-input-container>
+
+
+            <md-input-container class="md-block">
+              <label>Correo electrónico</label>
+              <input type="email" ng-model="contact.email" name="email" required="" ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/">
+              <div ng-messages="contactForm.email.$error" multiple="">
+                  <div ng-message="required">
+                    Correo electrónico requerido.
+                  </div>
+
+                  <div ng-message="pattern">
+                    Ingresa un correo electrónico válido.
+                  </div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Mensaje</label>
+              <textarea ng-model="contact.message" name="message" md-maxlength="500" md-select-on-focus required></textarea>
+              <div ng-messages="contactForm.message.$error" ng-show="contactForm.message.$touched || contactForm.message.$submitted">
+                  <div ng-message="required">
+                    Mensaje requerido
+                  </div>
+              </div>
+            </md-input-container>
+
+            <section layout="row" layout-sm="row" layout-align="center center" layout-wrap>
+              <md-button type="submit" class="md-raised md-primary" ng-disabled="contactForm.$invalid">Enviar</md-button>
+            </section>
+
+       </form>
+      </div>
+    </md-dialog-content>
+</md-dialog>

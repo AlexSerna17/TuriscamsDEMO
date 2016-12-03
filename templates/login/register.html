@@ -17,7 +17,6 @@
 						</div>
 					</md-input-container>
 
-
 					<md-input-container md-no-float="" class="md-block web-input-orange" flex-gt-sm>
 						<input type="email" name="email" ng-model="email" placeholder="Correo electrónico" required ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/" />		
 						<div ng-messages="tkm_register.email.$error"  ng-show="tkm_register.email.$touched || tkm_register.email.$submitted" multiple="" md-auto-hide="false" style="text-align: center;">
@@ -61,7 +60,7 @@
 						<div layout-wrap layout-gt-sm="row" >
 							<div flex-gt-sm="50">
 								<md-checkbox md-no-ink aria-label="" ng-model="conditions"  name="conditions" required>
-									Acepto los <a href="#terms" class="text-terms">Términos y Condiciones.</a>
+									Acepto los <a ng-click="modal.show()" class="text-terms">Términos y Condiciones.</a>
 								</md-checkbox>
 							</div>
 						</div>
@@ -72,4 +71,18 @@
 
 </div>
     </ion-content>
+    <script id="templates/login/modal.html" type="text/ng-template">
+      <ion-modal-view ng-controller="termsCtrl">
+        <ion-header-bar class="bar bar-header bar-positive bar-turiscams">
+          <button class="button button-clear button-primary icon-left-A ion-chevron-left" ng-click="modal.hide()" style="font-size: 12px; font-weight: bold; padding-left: 10px; height: 44px; max-width: 80px; width: 80px;"> Volver</button>
+          <h1 class="title" style="font-size:16px !impor;">Términos y condiciones</h1>
+        </ion-header-bar>
+        <ion-content class="padding" style="text-align: justify;">
+        {{termsConditions}} 
+        </ion-content>
+      </ion-modal-view>
+    </script>
 </ion-view>
+
+
+<!-- {{termsConditions}} -->

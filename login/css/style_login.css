@@ -38,6 +38,17 @@ body{
     padding: 0 10px !important;
 }
 
+/*título centrado en moodal de terminos y condiones login*/
+.bar.bar-header .button+.title {
+    text-align: center !important; 
+    left: 35px;
+    line-height: 46px;
+}
+/*flecha de volver en terminos login*/
+.icon-left-A{
+    font-size: 12px !important;
+    text-transform: capitalize !important;
+}
 .button.activated {
        -webkit-transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
     transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);

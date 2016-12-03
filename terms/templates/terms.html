@@ -1,0 +1,13 @@
+<md-list flex>
+  <md-list-item  ng-repeat="item in menuMore" ng-click="showModal($index, $event)">
+    <md-icon md-svg-src="../libs/css/images/{{item.icon}}.svg" class="icon-list"></md-icon>
+    <p>{{item.tittle}}</p>
+  </md-list-item>
+
+  <md-list-item  ng-disabled="true" ng-click="showModal($index, $event)">
+    <md-icon md-svg-src="../libs/css/images/home.svg" class="icon-list"></md-icon>
+    <p>Califícanos</p>
+  </md-list-item>
+</md-list>
+
+

@@ -1,0 +1,33 @@
+
+<md-dialog aria-label="Tèrminos y condiciones" ng-controller="termsCtrl">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools-modal" ng-if="user == true">
+        <span flex></span>
+        <md-button  class="md-icon-button" ng-click="cancel()"><strong>OK</strong></md-button>
+      </div>
+
+      <div class="md-toolbar-tools" ng-if="user == false">
+        <md-button class="text-header-icon" ng-click="cancel()">
+          <md-icon md-svg-icon="../libs/css/images/angle-left.svg"></md-icon>
+          Volver
+        </md-button>
+        <div class="content-img-header">
+            <img src="../libs/css/images/logo.png" class="img-logo-header" alt="" style="width: 110px">
+        </div>
+
+        <md-button class="md-icon-button button-with-text" aria-label="More">
+          <md-icon md-svg-icon="../libs/css/images/phone-outline.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="header-tittle">
+        Promociona tu recorrido
+      </div>
+      <div class="md-dialog-content">
+          Contenido
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>

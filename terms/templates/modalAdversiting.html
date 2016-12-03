@@ -1,0 +1,199 @@
+
+<md-dialog aria-label="Tèrminos y condiciones" ng-controller="termsCtrl">
+    <md-toolbar>
+      <div class="md-toolbar-tools-modal" ng-if="user == true">
+        <span flex></span>
+        <md-button  class="md-icon-button" ng-click="cancel()"><strong>OK</strong></md-button>
+      </div>
+
+      <div class="md-toolbar-tools" ng-if="user == false">
+        <md-button class="text-header-icon" ng-click="cancel()">
+          <md-icon md-svg-icon="../libs/css/images/angle-left.svg"></md-icon>
+          Volver
+        </md-button>
+        <div class="content-img-header">
+            <img src="../libs/css/images/logo.png" class="img-logo-header" alt="" style="width: 110px">
+        </div>
+
+        <md-button class="md-icon-button button-with-text" aria-label="More">
+          <md-icon md-svg-icon="../libs/css/images/phone-outline.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+    <div class="header-tittle">
+      Anunciate con nosotros
+    </div>
+
+<div class="md-dialog-content" ng-controller="adversitingCtrl">
+       <form name="adversitingForm" ng-submit="sendContact()">
+          
+            <div layout="row" layout-align="center center" class="tittleFormMore">
+              Datos empresa
+            </div>
+
+            <md-input-container class="md-block">
+              <label>Nombre</label>
+              <input ng-model="contact.name" name="name" id="name" required maxlength="30">
+              <div ng-messages="adversitingForm .name.$error" ng-show="adversitingForm.name.$touched || adversitingForm.name.$submitted">
+                  <div ng-message-exp="['required']">
+                    Nombre requerido
+                  </div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Giro</label>
+              <md-select ng-model="ctrl.optionsGiro" name="giro" required>
+                <md-option ng-repeat="giro in giros" ng-value="giro">
+                  {{giro}}
+                </md-option>
+              </md-select>
+              <div ng-messages="adversitingForm.giro.$error">
+                  <div ng-message-exp="['required']">
+                    Selecciona una opción
+                  </div>
+              </div>
+            </md-input-container>
+            
+            <md-input-container class="md-block" ng-show="ctrl.optionsGiro == 'Otro' ">
+              <label>Otro</label>
+              <input ng-model="contact.otro">
+            </md-input-container>
+
+
+            <md-input-container class="md-block">
+              <label>Sitio web</label>
+              <input ng-model="contact.website" name="website" required>
+              <div ng-messages="adversitingForm .website.$error">
+                  <div ng-message-exp="['required']">
+                    Sitio web requerido
+                  </div>
+              </div>
+            </md-input-container>
+
+
+            <div layout="row" layout-align="center center" class="tittleFormMore">
+              Datos de ubicación
+            </div>
+            
+            <md-input-container class="md-block">
+              <label>País</label>
+              <md-select ng-model="ctrl.optionsCountry" name="country" required>
+                <md-option ng-repeat="country in countries"  ng-value="country">
+                  {{country}}
+                </md-option>
+              </md-select>
+              <div ng-messages="adversitingForm.country.$error">
+                  <div ng-message-exp="['required']">
+                    Selecciona una opción
+                  </div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Estado</label>
+              <md-select ng-model="ctrl.optionsState" name="state" required>
+                <md-option ng-repeat="state in states"  ng-value="state">
+                  {{state}}
+                </md-option>
+              </md-select>
+              <div ng-messages="adversitingForm.state.$error">
+                  <div ng-message-exp="['required']">
+                    Selecciona una opción
+                  </div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Municipio/Delegación</label>
+              <md-select ng-model="ctrl.options" name="municipality" required>
+                <md-option ng-repeat="municipality in municipalities"  ng-value="municipality">
+                  {{municipality}}
+                </md-option>
+              </md-select>
+              <div ng-messages="adversitingForm.municipality.$error">
+                  <div ng-message-exp="['required']">
+                    Selecciona una opción
+                  </div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Código postal</label>
+              <input ng-model="contact.cp" name="cp" required type="number" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+              <div ng-messages="adversitingForm.cp.$error">
+                  <div ng-message-exp="['required']">
+                    Código postal requerido
+                  </div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Direeción</label>
+              <input ng-model="contact.address" name="address" required>
+              <div ng-messages="adversitingForm.address.$error">
+                  <div ng-message-exp="['required']">
+                    Dirección requerida
+                  </div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Colonia</label>
+              <input ng-model="contact.colony" name="colony" required>
+              <div ng-messages="adversitingForm.colony.$error">
+                  <div ng-message-exp="['required']">
+                    Colonia requerida
+                  </div>
+              </div>
+            </md-input-container>
+
+
+            <div layout="row" layout-align="center center" class="tittleFormMore">
+              Datos de contacto
+            </div>
+
+            <md-input-container class="md-block">
+              <label>Titular</label>
+              <input ng-model="contact.holder" name="holder" required>
+              <div ng-messages="adversitingForm.holder.$error">
+                  <div ng-message-exp="['required']">
+                    Titular requerido
+                  </div>
+              </div>
+            </md-input-container>
+            
+
+            <md-input-container class="md-block">
+              <label>Teléfono</label>
+              <input ng-model="contact.telephone" name="telephone" required type="number" maxlength="10">
+              <div ng-messages="adversitingForm.telephone.$error" >
+                  <div ng-message-exp="['required']">
+                      Teléfono requerido
+                  </div>
+              </div>
+            </md-input-container>
+            
+            <md-input-container class="md-block">
+              <label>Correo electrónico</label>
+              <input type="email" ng-model="contact.email" name="email" required="" ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/">
+              <div ng-messages="adversitingForm.email.$error" multiple="">
+                  <div ng-message="required">
+                    Correo electrónico requerido.
+                  </div>
+
+                  <div ng-message="pattern">
+                    Ingresa un correo electrónico válido.
+                  </div>
+              </div>
+            </md-input-container>
+
+
+             <section layout="row" layout-sm="row" layout-align="center center" layout-wrap>
+              <md-button type="submit" class="md-raised md-primary" ng-disabled="adversitingForm.$invalid">Enviar</md-button>
+            </section>
+       </form>
+      </div>
+    </md-dialog-content>
+</md-dialog>

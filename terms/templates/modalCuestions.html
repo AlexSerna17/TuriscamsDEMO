@@ -1,0 +1,47 @@
+<!-- 
+  Date: 04/11/2016
+    Empresa: TI Consulting
+    Created By: José Alejandro Salas Serna  - Dev.
+    Description: Modal de preguntas frecuentes
+    Last Modification Date: 
+ -->
+
+<md-dialog aria-label="Tèrminos y condiciones" ng-controller="termsCtrl" class="overflow: hidden;">
+    <md-toolbar>
+      <div class="md-toolbar-tools-modal" ng-if="user == true">
+        <span flex></span>
+        <md-button  class="md-icon-button" ng-click="cancel()"><strong>OK</strong></md-button>
+      </div>
+
+      <div class="md-toolbar-tools" ng-if="user == false">
+        <md-button class="text-header-icon" ng-click="cancel()">
+          <md-icon md-svg-icon="../libs/css/images/angle-left.svg"></md-icon>
+          Volver
+        </md-button>
+        <div class="content-img-header">
+            <img src="../libs/css/images/logo.png" class="img-logo-header" alt="" style="width: 110px">
+        </div>
+
+        <md-button class="md-icon-button button-with-text" aria-label="More">
+          <md-icon md-svg-icon="../libs/css/images/phone-outline.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content class="content-faqs ">
+      <div class="header-tittle">
+        Preguntas frecuentes
+      </div>
+            <md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect id="tabs-cuestion">
+              <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
+                  <uib-accordion close-others="oneAtATime" class="demo-tab tab{{$index%4}}">
+                    <div uib-accordion-group class="" ng-repeat="faq in tab.faqs" is-open="status" >
+                      <uib-accordion-heading >
+                        {{faq.question}}<i class="pull-right glyphicon iconOrange" ng-class="{'glyphicon-chevron-up': status, 'glyphicon-chevron-down': !status}"></i>
+                      </uib-accordion-heading>
+                        {{faq.answer}}
+                    </div>
+                  </uib-accordion>
+              </md-tab>
+            </md-tabs>
+    </md-dialog-content>
+</md-dialog>

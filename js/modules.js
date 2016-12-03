@@ -12,6 +12,7 @@ angular.module('menufilters',[]);
 // angular.module('weather',[]);
 
 // angular.module('terms', ['ngMaterial','ngMessages', 'ngAnimate', 'ngSanitize', 'ui.bootstrap']);
+angular.module('terms',['ionic', 'ionic-material']);
 
 // angular.module('tabbar', []);
 
