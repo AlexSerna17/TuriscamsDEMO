@@ -36,3 +36,23 @@
         $scope.popover.remove();
     });
 });
+//Coockies
+
+app.controller('userCtrl',function($scope, $cookies){
+    if( $cookies.getObject('user_data') ){
+        // Get data from cookie
+        var user_data = $cookies.getObject('user_data');
+        $scope.username = user_data.username;
+        console.log(user_data.username + " Aquì");
+    }else{
+        $scope.username="userIn";
+    } 
+
+    $scope.closeSesion = function(){
+        console.log("Cerrado");
+        $cookies.remove('user_data', {path: "/"});
+        // window.location.reload();
+        document.location.href="/";
+    }
+
+});

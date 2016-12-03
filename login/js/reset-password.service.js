@@ -16,12 +16,15 @@ angular.module('login')
 				var alertPopup = $ionicPopup.alert({
 					title: 'Hecho',
 					template: 'Te hemos enviado un correo electrónico con tu contraseña',
+					 okText: 'Aceptar',
 					okType: 'button-alerts'
-				}); 							
+				}); 
+				window.location.href = '#/app/login/account';							
 			}).error(function(response){
 				var alertPopup = $ionicPopup.alert({
 					title: 'Se ha producido un error',
 					template: 'El correo electrónico no es válido',
+					 okText: 'Aceptar',
 					okType: 'button-alerts'
 				});							
 			}); 

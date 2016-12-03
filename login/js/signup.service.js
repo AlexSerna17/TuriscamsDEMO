@@ -44,6 +44,7 @@ angular.module('login')
 								var alertPopup = $ionicPopup.alert({
 							     title: 'Se ha producido un error',
 							     template: 'Este correoe electrònico ya esta registrado',
+							     okText: 'Aceptar',
 							     okType: 'button-alerts'
 							   });  
 							});	

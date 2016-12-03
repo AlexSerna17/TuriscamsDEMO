@@ -1,7 +1,6 @@
 angular.module('login')
 
 .controller('loginCtrl',function(loginService2, $scope, $stateParams){
-	console.log("Entrò");
 	$scope.inputType = 'password';
 	  // Hide & show password function
 	  $scope.hideShowPassword = function(){

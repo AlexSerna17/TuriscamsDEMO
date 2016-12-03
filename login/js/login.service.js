@@ -23,7 +23,7 @@ angular.module('login')
 							};
 							
 								$cookies.putObject('user_data', user_data, {path: "/"});
-								location.href = "home.html"
+								window.location.href = "home.html"
 								//return response;
 								
 							}).error(function(response){
@@ -34,6 +34,7 @@ angular.module('login')
 								var alertPopup = $ionicPopup.alert({
 							     title: 'Se ha producido un error',
 							     template: 'El correo electrónico o contraseña no son correctos',
+							     okText: 'Aceptar',
 							     okType: 'button-alerts'
 							   }); 
 								// e27635 navigator.notification.alert('El correo electrónico o contraseña no son correctos',null,'Se ha producido un error','Aceptar');

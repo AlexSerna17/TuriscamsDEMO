@@ -20,14 +20,12 @@ body{
     height: auto;
 }
 .img_fondo_login{
-    /*position: relative*/
-    background: url(images/fondo_login_movil.jpg) no-repeat center center fixed;
+   /*transition: all 1s;*/
     padding: 5px;
-    /*background: blue;*/
-    /*-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;*/
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 
 }
 /*Tamaño de botones y texto*/

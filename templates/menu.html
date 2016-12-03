@@ -41,8 +41,10 @@
         <ion-header-bar class="expanded">
             <img src="img/perfil.jpg" class="avatar motion spin fade">
             <div class="menu-bottom text-center">
-                Alex Serna <br>
-                <label><a href="" class="link_white">Pulsa aqui para ver o editar tu perfil</a></label>
+                {{username}} <br>
+                <label><a href="" class="link_white" ng-if="username != 'userIn'">Pulsa aqui para ver o editar tu perfil</a></label>
+                <label><a href="" class="link_white" ng-if="username == 'userIn'" >Iniciar Sesión</a></label>
+                
             </div>
         </ion-header-bar>
         <ion-content class="stable-bg has-expanded-header">
@@ -75,6 +77,11 @@
               <a class="item item-icon-left item-icon-right" nav-clear menu-close href="#/app/Catalogs">
                 <i class="icon ion-email"></i>
                 Catálogos
+                <i class="icon ion-ios-telephone-outline"></i>
+              </a>
+              <a class="item item-icon-left item-icon-right" ng-if="username != 'userIn'" nav-clear menu-close ng-click="closeSesion()">
+                <i class="icon ion-email"></i>
+                Cerrar sesiòn
                 <i class="icon ion-ios-telephone-outline"></i>
               </a>
             </div>

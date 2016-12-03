@@ -1,5 +1,5 @@
 
-<ion-view view-title="">
+<ion-view view-title="" >
    <div>
           <ion-nav-bar class="bar-turiscams">
             <ion-nav-back-button class="text">
@@ -12,9 +12,9 @@
             </ion-nav-buttons>
         </ion-nav-bar>
     </div>
-    <ion-content class="img_fondo_login" layout="column" layout-align="end center">
+    <ion-content class="img_fondo_login" back-img="{{image}}" layout="column" layout-align="end center">
     <div layout="column" layout-align="center center">
-        <img src="login/css/images/logo.png" alt="" id="img_logo_login">
+        <img src="login/css/images/logo.png" alt="" id="img_logo_login" class="hola">
     </div>
     <div>
         <button class="button btn-login icon-left turis-facebook button-block btn_fb_login" >Entrar con facebook</button>
@@ -29,4 +29,6 @@
         </a>
     </div>
     </ion-content>
+  
+
 </ion-view>
