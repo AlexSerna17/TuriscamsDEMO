@@ -1,6 +1,6 @@
-angular.module('login')
+angular.module('facebook')
 
-.service('loginService',function($http, $cookies){
+.service('loginService2',function($http, $cookies){
 	
 	this.facebook = function(){
 		

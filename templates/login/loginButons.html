@@ -17,7 +17,9 @@
         <img src="login/css/images/logo.png" alt="" id="img_logo_login" class="hola">
     </div>
     <div>
-        <button class="button btn-login icon-left turis-facebook button-block btn_fb_login" >Entrar con facebook</button>
+        <div ng-controller="facebookCtrl">
+            <button class="button btn-login icon-left turis-facebook button-block btn_fb_login" ng-click="facebook_login();" >Entrar con facebook</button>
+        </div>   
          <a href="#/app/login/account">
             <button class="button btn-login icon-left turis-iconturiscams button-block btn_tkm_login" >Ingresar con cuenta<img src="login/css/images/logo.png" alt="" width="20%"></button>
         </a>
