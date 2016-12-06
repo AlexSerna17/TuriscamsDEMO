@@ -106,7 +106,7 @@ angular.module('facebook')
 								$cookies.putObject('user_data', user_data, {path: "/"});
 
 								//location.href = "home"
-								// window.location.href = "home.html";
+								 window.location.href = "home.html";
 							}, function errorCallback(response){
 
 								console.log(response);
