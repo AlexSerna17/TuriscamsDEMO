@@ -42,8 +42,8 @@
             <img src="img/perfil.jpg" class="avatar motion spin fade">
             <div class="menu-bottom text-center">
                 {{username}} <br>
-                <label><a href="" class="link_white" ng-if="username != 'userIn'">Pulsa aqui para ver o editar tu perfil</a></label>
-                <label><a href="" class="link_white" ng-if="username == 'userIn'" >Iniciar Sesión</a></label>
+                <label><a href="" class="link_white" ng-if="username != ' '">Pulsa aqui para ver o editar tu perfil</a></label>
+                <a onclick="location.href='index.html'" class="link_white" ng-if="username == ' '" ><label>Iniciar sesión </label></a>
                 
             </div>
         </ion-header-bar>

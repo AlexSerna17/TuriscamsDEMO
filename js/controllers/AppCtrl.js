@@ -58,7 +58,7 @@ app.controller('userCtrl',function($scope, $cookies){
         $scope.username = user_data.username;
         console.log(user_data.profile_pic + " Aquì");
     }else{
-        $scope.username="userIn";
+        $scope.username=" ";
     } 
 
     $scope.closeSesion = function(){
