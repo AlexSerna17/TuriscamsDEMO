@@ -6,12 +6,16 @@ body{
    overflow-x: hidden;
 }
 #img_logo_login{
-    width: 90%;
-    padding-bottom: 45%;
+/*    width: 90%;
+    padding-bottom: 45%;*/
 	/*max-height: 210px;
     margin: 144px 0px 0px 0px;
     max-width: 88%;
     height: auto;*/
+    position: absolute;
+    width: 90%;
+    top: 150px;
+    left: 5%;
 }
 #img_logo_register{
 	max-height: 100px;
@@ -22,7 +26,7 @@ body{
 .img_fondo_login{
    /*transition: all 1s;*/
     padding: 5px;
-
+    background-size: contain;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -38,6 +42,13 @@ body{
     padding: 0 10px !important;
 }
 
+/*bar login*/
+.bar-login{
+    height: 0px;
+    color: #fff;
+    margin-top: 30px;
+    text-align: center;
+}
 /*título centrado en moodal de terminos y condiones login*/
 .bar.bar-header .button+.title {
     text-align: center !important; 

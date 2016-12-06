@@ -1,9 +1,25 @@
-<ion-view view-title="Iniciar Sesiòn">
-    <ion-content class="img_fondo_login" back-img="{{image}}" layout="column" layout-align="end center">
-    	<div layout="column" layout-align="center center">
+<ion-view view-title="Iniciar sesión">
+
+    <ion-content class="img_fondo_login" back-img="{{image}}">
+    	<ion-nav-bar class="bar-login">
+            <ion-nav-back-button class="no-text">
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear turis" id="menu-popover" ng-click="popover.show($event)"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+
+
 	        <img src="login/css/images/logo.png" alt="" id="img_logo_login">
-	    </div>
-    	<div layout-align="end stretch">
+    	
+    </ion-content>
+
+
+    	<div class="" style="position: absolute; width: 100%; bottom: 0; padding: 0 5px 10px 5px;">
     		<form class="text-center" ng-submit="login_details()" name="login_tkm" novalidate ng-controller="loginCtrl ">
 			<div class="login-container" >
 				<md-input-container md-no-float="" class="md-block web-input-orange" flex-gt-sm>
@@ -37,17 +53,16 @@
 					<div layout-wrap layout-gt-sm="row" >
 						<div flex-gt-sm="50">
 							<md-checkbox md-no-ink aria-label="" ng-model="passwordCheckbox" ng-click="hideShowPassword()">
-								Mostrar contraseña</a>
+								Mostrar contraseña
 							</md-checkbox>
 						</div>
 					</div>
 				</fieldset>
+
 			</div>
 			<button type="submit" class="button btn-login button-block btn_pass_login" ng-form-loader="login_details()" ng-disabled="login_tkm.$invalid"><strong>Iniciar sesión</strong></button>
-			<a href="#/app/login/account/resetPass" class="text-white">¿Olvidaste tu contraseña?</strong></a>
+			<a href="#/app/login/account/resetPass" class="text-white"><strong>¿Olvidaste tu contraseña?</strong></a>
 		</form>
     		
 		</div>
-    	
-    </ion-content>
 </ion-view>

@@ -3,7 +3,8 @@ angular.module('login')
     return function(scope, element, attrs){
         attrs.$observe('backImg', function(value) {
             element.css({
-                'background': 'transparent url(' + value +') no-repeat center center fixed'
+                'background': 'transparent url(' + value +') no-repeat center center fixed',
+                'background-size': 'cover'
             });
         });
     };
@@ -15,11 +16,11 @@ angular.module('login')
 	var imagenes=new Array(
 		        'img/fondo1.jpg',
 		        'img/fondo2.jpg',
+		        'img/fondo3.jpg',
 		        'img/fondo4.jpg',
 		        'img/fondo5.jpg',
 		        'img/fondo6.jpg',
-		        'img/fondo8.jpg',
-		        'img/fondo9.jpg'
+		        'img/fondo7.jpg'
 		    );
 
 	$scope.imagenes;

@@ -56,7 +56,7 @@ app.controller('userCtrl',function($scope, $cookies){
         // Get data from cookie
         var user_data = $cookies.getObject('user_data');
         $scope.username = user_data.username;
-        console.log(user_data.username + " Aquì");
+        console.log(user_data.profile_pic + " Aquì");
     }else{
         $scope.username="userIn";
     } 
@@ -65,7 +65,7 @@ app.controller('userCtrl',function($scope, $cookies){
         console.log("Cerrado");
         $cookies.remove('user_data', {path: "/"});
         // window.location.reload();
-        document.location.href="/";
+        document.location.href="index.html";
     }
 
 });

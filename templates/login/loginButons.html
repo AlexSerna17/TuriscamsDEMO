@@ -1,6 +1,6 @@
 
 <ion-view view-title="" >
-   <div>
+<!--    <div>
           <ion-nav-bar class="bar-turiscams">
             <ion-nav-back-button class="text">
             </ion-nav-back-button>
@@ -11,24 +11,22 @@
                 <button class="button button-icon button-clear turis-phone" id="menu-popover" ng-click="popover.show($event)"></button>
             </ion-nav-buttons>
         </ion-nav-bar>
-    </div>
-    <ion-content class="img_fondo_login" back-img="{{image}}" layout="column" layout-align="end center">
-    <div layout="column" layout-align="center center">
-        <img src="login/css/images/logo.png" alt="" id="img_logo_login" class="hola">
-    </div>
-    <div>
-        <button class="button btn-login icon-left turis-facebook button-block btn_fb_login" >Entrar con facebook</button>
-         <a href="#/app/login/account">
-            <button class="button btn-login icon-left turis-iconturiscams button-block btn_tkm_login" >Ingresar con cuenta<img src="login/css/images/logo.png" alt="" width="20%"></button>
-        </a>
-        <a href="#/app/login/register">
-        <button class="button btn-login icon-left turis-registeruser button-block btn_register_login">¡Registrarse ahora!</button>
-        </a>
-        <a href="home.html">
-        <button class="button btn-login icon-left turis-unregistered button-block btn_pass_login">Continuar sin registrar</button>
-        </a>
-    </div>
+    </div> -->
+    <ion-content class="img_fondo_login" back-img="{{image}}" >
+        <img src="login/css/images/logo.png" alt="" id="img_logo_login">
     </ion-content>
+    <div style="position: absolute; width: 100%; bottom: 0; padding: 0 5px 10px 5px;">
+        <button class="button btn-login icon-left turis-facebook button-block btn_fb_login" >Entrar con facebook</button>
+             <a href="#/app/login/account">
+        <button class="button btn-login icon-left turis-iconturiscams button-block btn_tkm_login" >Ingresar con cuenta<img src="login/css/images/logo.png" alt="" style="margin-bottom: -6px; width: 80px;"></button>
+            </a>
+            <a href="#/app/login/register">
+        <button class="button btn-login icon-left turis-registeruser button-block btn_register_login">¡Registrarse ahora!</button>
+            </a>
+            <a href="home.html">
+        <button class="button btn-login icon-left turis-unregistered button-block btn_pass_login">Continuar sin registrar</button>
+            </a>
+    </div>
   
 
 </ion-view>
