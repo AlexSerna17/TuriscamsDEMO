@@ -43,7 +43,7 @@ angular.module('login')
 								// navigator.notification.alert('Este correo electrónico ya está registrado',null,'Se ha producido un error','Aceptar');
 								var alertPopup = $ionicPopup.alert({
 							     title: 'Se ha producido un error',
-							     template: 'Este correoe electrònico ya esta registrado',
+							     template: 'Este correo electrónico ya está registrado',
 							     okText: 'Aceptar',
 							     okType: 'button-alerts'
 							   });  

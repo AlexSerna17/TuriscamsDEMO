@@ -1,4 +1,4 @@
-<ion-view view-title="Registrar">
+<ion-view view-title="Registro">
     <ion-content class="img_fondo_login" back-img="{{image}}">
     	<ion-nav-bar class="bar-login" style="box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0) !Important; color: #fff; margin-top: 25px;">
             <ion-nav-back-button class="no-text">
@@ -66,21 +66,21 @@
 				<div layout-wrap layout-gt-sm="row" >
 					<div flex-gt-sm="50">
 						<md-checkbox md-no-ink aria-label="" ng-model="conditions"  name="conditions" required>
-							Acepto los <a ng-click="modal.show()" class="text-terms">Términos y Condiciones.</a>
+							Acepto los <a ng-click="modal.show()" class="text-terms">Términos y Condiciones</a>
 						</md-checkbox>
 					</div>
 				</div>
 			</fieldset>
 
 		</div>
-		<button type="submit" class="button btn-login button-block btn_pass_login" ng-form-loader="login_details()" ng-disabled="tkm_register.$invalid"><strong>Registrarse</strong></button>
+		<button type="submit" class="button btn-login button-block btn_pass_login" ng-form-loader="login_details()" ng-disabled="tkm_register.$invalid"><strong>Registrarme</strong></button>
 	</form>
 
     <script id="templates/login/modal.html" type="text/ng-template">
       <ion-modal-view ng-controller="termsCtrl">
         <ion-header-bar class="bar bar-header bar-positive bar-turiscams">
           <button class="button button-clear button-primary icon-left-A ion-chevron-left" ng-click="modal.hide()" style="font-size: 12px; font-weight: bold; padding-left: 10px; height: 44px; max-width: 80px; width: 72px;"> Volver</button>
-          <h1 class="title" style="font-size:16px !impor;">Términos y condiciones</h1>
+          <h1 class="title" >Términos y condiciones</h1>
         </ion-header-bar>
         <ion-content class="padding" style="text-align: justify;">
         {{termsConditions}} 
