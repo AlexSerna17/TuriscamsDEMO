@@ -11,6 +11,7 @@
                 <button class="button button-icon button-clear turis-phone" id="menu-popover" ng-click="popover.show($event)"></button>
             </ion-nav-buttons>
         </ion-nav-bar>
+<<<<<<< HEAD
     </div> -->
     <ion-content class="img_fondo_login" back-img="{{image}}" >
         <img src="login/css/images/logo.png" alt="" id="img_logo_login">
@@ -21,6 +22,21 @@
         <button class="button btn-login icon-left turis-iconturiscams button-block btn_tkm_login" >Ingresar con cuenta<img src="login/css/images/logo.png" alt="" style="margin-bottom: -6px; width: 80px;"></button>
             </a>
             <a href="#/app/login/register">
+=======
+    </div>
+    <ion-content class="img_fondo_login" back-img="{{image}}" layout="column" layout-align="end center">
+    <div layout="column" layout-align="center center">
+        <img src="login/css/images/logo.png" alt="" id="img_logo_login" class="hola">
+    </div>
+    <div>
+        <div ng-controller="facebookCtrl">
+            <button class="button btn-login icon-left turis-facebook button-block btn_fb_login" ng-click="facebook_login();" >Entrar con facebook</button>
+        </div>   
+         <a href="#/app/login/account">
+            <button class="button btn-login icon-left turis-iconturiscams button-block btn_tkm_login" >Ingresar con cuenta<img src="login/css/images/logo.png" alt="" width="20%"></button>
+        </a>
+        <a href="#/app/login/register">
+>>>>>>> d14ec6bdbd51914db3a92ce203adc28cc1286345
         <button class="button btn-login icon-left turis-registeruser button-block btn_register_login">¡Registrarse ahora!</button>
             </a>
             <a href="home.html">
