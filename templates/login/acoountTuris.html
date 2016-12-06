@@ -21,7 +21,7 @@
 
     	<div class="" style="position: absolute; width: 100%; bottom: 0; padding: 0 5px 10px 5px;">
     		<form class="text-center" ng-submit="login_details()" name="login_tkm" novalidate ng-controller="loginCtrl ">
-			<div class="login-container" >
+			<div class="login-container" style="" >
 				<md-input-container md-no-float="" class="md-block web-input-orange" flex-gt-sm>
 					<input type="email" name="email" ng-model="email" placeholder="Correo electrónico" required ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/" />	
 					<div ng-messages="login_tkm.email.$error"  ng-show="login_tkm.email.$touched || login_tkm.email.$submitted" multiple="" md-auto-hide="false" style="text-align: center;">

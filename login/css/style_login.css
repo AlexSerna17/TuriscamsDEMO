@@ -229,6 +229,7 @@ div.form-group a {
     min-height: 146px;
     border-radius: 5px;
     padding: 11px 12px 0px 12px;
+    margin-bottom:10px;
     /*margin*/: 111px 0px 10px 0px;
 }
 .reset-container{
