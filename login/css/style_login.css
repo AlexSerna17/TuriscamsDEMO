@@ -48,6 +48,7 @@ body{
     color: #fff;
     margin-top: 30px;
     text-align: center;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,.26);
 }
 /*título centrado en moodal de terminos y condiones login*/
 .bar.bar-header .button+.title {
