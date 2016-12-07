@@ -44,7 +44,7 @@ body{
 
 /*bar login*/
 .bar-login{
-    height: 0px;
+    height: 0px !important;
     color: #fff;
     margin-top: 30px;
     text-align: center;
