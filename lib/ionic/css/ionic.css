@@ -7268,7 +7268,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-  border: 0; }
+  /*border: 0;  Se comentó para los inputs de material*/}
 
 input[type="radio"],
 input[type="checkbox"] {
