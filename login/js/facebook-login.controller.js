@@ -69,7 +69,7 @@ angular.module('facebook')
 		
 	
 	console.log("FACEBOOK!");
-		openFB.init({appId: '128116853951759'});
+		openFB.init({appId: '1744883549167965'});
 		openFB.login(
                 function(response) {
                     if(response.status === 'connected') {

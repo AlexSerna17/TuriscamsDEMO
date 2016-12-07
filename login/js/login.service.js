@@ -31,13 +31,13 @@ angular.module('login')
 								console.log(password);
 								//window.alert('El correo electrónico o contraseña son incorrectos','Hola','Acepetar');
 								//console.error('Gists error', response.status, response.data);
-								var alertPopup = $ionicPopup.alert({
-							     title: 'Se ha producido un error',
-							     template: 'El correo electrónico o contraseña no son correctos',
-							     okText: 'Aceptar',
-							     okType: 'button-alerts'
-							   }); 
-								// e27635 navigator.notification.alert('El correo electrónico o contraseña no son correctos',null,'Se ha producido un error','Aceptar');
+							// 	var alertPopup = $ionicPopup.alert({
+							//      title: 'Se ha producido un error',
+							//      template: 'El correo electrónico o contraseña no son correctos',
+							//      okText: 'Aceptar',
+							//      okType: 'button-alerts'
+							//    }); 
+								 navigator.notification.alert('El correo electrónico o contraseña no son correctos',null,'Se ha producido un error','Aceptar');
 							}); 
 							
 		

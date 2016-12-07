@@ -18,7 +18,9 @@ app.run(function ($ionicPlatform) {
         }
     });
 })
-
+.config(function( $mdGestureProvider ) {
+          $mdGestureProvider.skipClickHijack();
+      })
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
