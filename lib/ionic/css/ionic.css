@@ -4801,7 +4801,8 @@ a.subdued {
       opacity: 1; }
 
 .tabs-striped.tabs-color-assertive .tab-item {
-  color: rgba(239, 71, 58, 0.4);
+  /*color: rgba(239, 71, 58, 0.4); Se cambió por colores turiscams*/
+  color: #7f879e;
   opacity: 1; }
   .tabs-striped.tabs-color-assertive .tab-item .badge {
     opacity: 0.4; }
@@ -4809,8 +4810,8 @@ a.subdued {
   .tabs-striped.tabs-color-assertive .tab-item.active,
   .tabs-striped.tabs-color-assertive .tab-item.activated {
     margin-top: -2px;
-    color: #ef473a;
-    border: 0 solid #ef473a;
+    color: #ff9503; /*Se cambió active*/
+    border: 0 solid #ff9503; /*Se cambió active*/
     border-top-width: 2px; }
     .tabs-striped.tabs-color-assertive .tab-item.tab-item-active .badge,
     .tabs-striped.tabs-color-assertive .tab-item.active .badge,
@@ -5238,7 +5239,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
 .tabs-icon-top.tabs .tab-item,
 .tabs-icon-bottom > .tabs .tab-item,
 .tabs-icon-bottom.tabs .tab-item {
-  font-size: 10px;
+  font-size: 12px; /*TAMAÑO DE LETRA DEL TABBAR*/
   line-height: 14px; }
 
 .tab-item .icon {
