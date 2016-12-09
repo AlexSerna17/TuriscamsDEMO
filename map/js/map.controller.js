@@ -1,6 +1,12 @@
 angular.module('map')
-.controller('mapCtrl',function($scope, $state){
-			// global "map" variable
+.controller('mapCtrl',function($scope, $state,$http){
+		// global "map" variable
+
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", "http://turiscams.com/tkm/v1/map/marker/", false);
+		xhr.send();
+		var markerInfo = JSON.parse(xhr.response);
+		
 		var map = null;
 
 		// marker cluster variable
@@ -17,9 +23,15 @@ angular.module('map')
 		// -----------------------------------------------------------------------
 		function createMarker(latlng, info) {
 			
+			var imageUrl = '../map/img/maker_tc.png';
+    		var markerImage = new google.maps.MarkerImage(imageUrl,
+        	new google.maps.Size(60, 60));	
+
+
 			var marker = new google.maps.Marker({
 				position: latlng,
-				map: map				
+				map: map,
+				icon: markerImage				
 			});
 
 			google.maps.event.addListener(marker, 'click', function() {
@@ -46,7 +58,7 @@ angular.module('map')
 			// create the map
 			var myOptions = {
 				zoom: 8,
-				center: new google.maps.LatLng(44.95,-93.215),
+				center: new google.maps.LatLng(markerInfo[0].Geolocation.longitude,  markerInfo[0].Geolocation.latitude),
 				mapTypeControl: true,
 				navigationControl: true,
 				mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -64,10 +76,11 @@ angular.module('map')
 			];
 			
 			// extract data and  create markers
-			for (var i = 0; i < markers.length; i++) {
-			  var point = new google.maps.LatLng( markers[i][2],  markers[i][3]);
-			  var marker = createMarker( point, "<div class='scrollFix'>" + markers[i][0] + ". " 			+ markers[i][1] + 
-												"<br/> " + "lat: " 		 + markers[i][2] + "</br> lng: " 	+  markers[i][3] + " </div>") ;
+			for (var i = 0; i < markerInfo.length; i++) {
+			  var point = new google.maps.LatLng( markerInfo[i].Geolocation.longitude,  markerInfo[i].Geolocation.latitude);
+			  var marker = createMarker( point, "<div class='scrollFix'>" + markerInfo[i].City + ". " + markerInfo[i].State + 
+												"<br/> "  + 
+						"</br><img src='http://turiscams.com/v1/" + markerInfo[i].Url + "/live.jpg' width='150' height='100'/><br/><div class='star-ratings-css' title='.1000'></div><br/> </div>") ;
 			}
 				
 			// create a Marker Clusterer that clusters markers
