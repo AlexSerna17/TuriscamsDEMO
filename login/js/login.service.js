@@ -9,7 +9,8 @@ angular.module('login')
 			return $http({
 							
 							method : 'GET',
-							url : url
+							url : url,
+							headers: { 'Authorization': '58486f4ce6be2b0001d166ca0ddf2faf3e3c4f5c4456db8628aa3a3b'},
 							}).success(function(response){
 							
 							// Create a object to save retrivied user data and set in cookie.

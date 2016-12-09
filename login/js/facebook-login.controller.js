@@ -118,7 +118,7 @@ angular.module('facebook')
                        
                        
                     } else {
-                        alert('Facebook login failed: ' + response.error);
+                        // alert('Facebook login failed: ' + response.error);
                     }
                 }, {scope: 'email,read_stream,publish_actions'});
 		
