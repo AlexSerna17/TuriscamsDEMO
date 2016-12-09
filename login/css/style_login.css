@@ -26,11 +26,16 @@ body{
 .img_fondo_login{
    /*transition: all 1s;*/
     padding: 5px;
+    margin-top: -64px;
     background-size: contain;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
 
+}
+/*Se hizo grande para poder poner el contenido siempre de footer*/
+.img_fondo_login .scroll{
+    height: 100% !important;
 }
 /*Tamaño de botones y texto*/
 .btn-login{
@@ -46,7 +51,7 @@ body{
 .bar-login{
     height: 0px !important;
     color: #fff;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     text-align: center;
     box-shadow: 0 0px 0px 0 rgba(0,0,0,.26);
 }
