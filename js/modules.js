@@ -18,7 +18,7 @@ angular.module('tabbar', []);
 
 // angular.module('ranking', ['ngAnimate', 'ngSanitize', 'ui.bootstrap','ngCookies']);
 
-// angular.module('map', []);
+angular.module('map', []);
 
 // angular.module('pics', ['ngMaterial', 'ngAnimate', 'ngSanitize', 'ngAria']);
 

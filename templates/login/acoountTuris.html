@@ -1,4 +1,4 @@
-<ion-view view-title="Iniciar sesión">
+<ion-view view-title="">
 
 	<ion-nav-bar class="bar-login" style="box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0) !Important; color: #fff;">
             <ion-nav-back-button class="no-text">
@@ -6,6 +6,9 @@
             <ion-nav-buttons side="left">
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
             </ion-nav-buttons>
+             <ion-nav-title>
+		      <img src="login/css/images/logo.png" alt="" style="margin-bottom: -8px; width: 90px;">
+		    </ion-nav-title>
             <ion-nav-buttons side="right">
                 <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
             </ion-nav-buttons>
@@ -25,7 +28,7 @@
 
 
 
-	        <img src="login/css/images/logo.png" alt="" id="img_logo_login">
+	        <!-- <img src="login/css/images/logo.png" alt="" id="img_logo_login"> -->
 
 		        <div class="" style="position: absolute; width: 100%; bottom: 0; padding: 0 5px 10px 5px;">
 		        	<form class="text-center" ng-submit="login_details()" name="login_tkm" novalidate ng-controller="loginCtrl ">
