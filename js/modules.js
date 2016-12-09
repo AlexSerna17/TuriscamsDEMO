@@ -14,7 +14,7 @@ angular.module('facebook', ['ngCookies']);
 // angular.module('terms', ['ngMaterial','ngMessages', 'ngAnimate', 'ngSanitize', 'ui.bootstrap']);
 angular.module('terms',['ionic', 'ionic-material']);
 
-// angular.module('tabbar', []);
+angular.module('tabbar', []);
 
 // angular.module('ranking', ['ngAnimate', 'ngSanitize', 'ui.bootstrap','ngCookies']);
 

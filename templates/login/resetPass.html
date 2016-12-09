@@ -1,6 +1,17 @@
 <ion-view view-title="Recuperar contraseña">
+	<ion-nav-bar class="bar-login" style="box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0) !Important; color: #fff;">
+            <ion-nav-back-button class="no-text">
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        
     <ion-content class="img_fondo_login" back-img="{{image}}">
-		<ion-nav-bar class="bar-login" style="box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0) !Important; color: #fff; margin-top: 25px;">
+		<!-- <ion-nav-bar class="bar-login" style="box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0) !Important; color: #fff; margin-top: 25px;">
             <ion-nav-back-button class="no-text">
             </ion-nav-back-button>
             <ion-nav-buttons side="left">
@@ -9,27 +20,28 @@
             <ion-nav-buttons side="right">
                 <button class="button button-icon button-clear turis" id="menu-popover" ng-click="popover.show($event)"></button>
             </ion-nav-buttons>
-        </ion-nav-bar>
+        </ion-nav-bar> -->
 	    <img src="login/css/images/logo.png" alt="" id="img_logo_login">
-    </ion-content>
-     <div style="position: absolute; width: 100%; bottom: 0; padding: 0 5px 10px 5px; text-align: center;">
-		<label for="" class="text-white text-center">Ingresa tu correo electrónico y te enviaremos tu contraseña</label>
-		<form class="text-center" ng-submit="reset_pass()" name="forgot_pass" ng-controller="resetCtrl">
-			<div class="reset-container" style="background: white;">
-				<md-input-container md-no-float="" class="md-block web-input-orange" flex-gt-sm>
-					<input type="email" name="email" ng-model="email" placeholder="Correo electrónico" required ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/"/>		
-					<div ng-messages="forgot_pass.email.$error"  ng-show="forgot_pass.email.$touched || forgot_pass.email.$submitted" multiple="" md-auto-hide="false" style="text-align: center;">
-						<div ng-message="required">
-							Correo electrónico requerido.
-						</div>
 
-						<div ng-message="pattern">
-							Ingresa un correo electrónico válido.
+	    <div style="position: absolute; width: 100%; bottom: 0; padding: 0 5px 10px 5px; text-align: center;">
+			<label for="" class="text-white text-center">Ingresa tu correo electrónico y te enviaremos tu contraseña</label>
+			<form class="text-center" ng-submit="reset_pass()" name="forgot_pass" ng-controller="resetCtrl">
+				<div class="reset-container" style="background: white;">
+					<md-input-container md-no-float="" class="md-block web-input-orange" flex-gt-sm>
+						<input type="email" name="email" ng-model="email" placeholder="Correo electrónico" required ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/"/>		
+						<div ng-messages="forgot_pass.email.$error"  ng-show="forgot_pass.email.$touched || forgot_pass.email.$submitted" multiple="" md-auto-hide="false" style="text-align: center;">
+							<div ng-message="required">
+								Correo electrónico requerido.
+							</div>
+
+							<div ng-message="pattern">
+								Ingresa un correo electrónico válido.
+							</div>
 						</div>
-					</div>
-				</md-input-container>
-			</div>
-			<button type="submit" class="button btn-login button-block btn_pass_login" ng-disabled="forgot_pass.$invalid"><strong>Recuperar contraseña</strong></button>
-		</form>
-	</div>
+					</md-input-container>
+				</div>
+				<button type="submit" class="button btn-login button-block btn_pass_login" ng-disabled="forgot_pass.$invalid"><strong>Recuperar contraseña</strong></button>
+			</form>
+		</div>
+    </ion-content>
 </ion-view>
