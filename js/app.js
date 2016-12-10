@@ -77,7 +77,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             'menuContent': {
                 templateUrl: 'templates/components.html',
-                controller: 'mapCtrl'
+                controller: 'mapController'
             }
         }
     })

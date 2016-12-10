@@ -1,6 +1,13 @@
 ﻿
 <ion-view view-title="Ionic Components+">
     <ion-content>
-       <div id="map-canvas"></div>
+       
+        <ng-map default-style="true" zoom="3" center="59.339025, 18.065818">
+            <info-window id="myInfoWindow">
+                <div ng-non-bindable>
+                    <h4>{{selectedCity.name}}</h4>
+                </div>
+            </info-window>
+        </ng-map>
     </ion-content>
 </ion-view>
