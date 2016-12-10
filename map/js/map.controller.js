@@ -1,7 +1,14 @@
 angular.module('map')
-.controller('mapCtrl',function($scope, $state,$http){
-		// global "map" variable
+.controller('mapCtrl',function($scope, $state,$http,$timeout){
 
+  $scope.doRefresh = function() {
+      $timeout(function() {
+          $scope.$broadcast('scroll.refreshComplete');
+          location.reload();
+        }, 1250);
+  };
+
+		// global "map" variable
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", "http://turiscams.com/tkm/v1/map/marker/", false);
 		xhr.send();

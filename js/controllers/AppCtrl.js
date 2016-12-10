@@ -1,5 +1,6 @@
 ﻿app.controller('AppCtrl', function ($scope, $ionicModal, $ionicPopover, $timeout) {
     // Form data for the login modal
+
     $scope.loginData = {};
 
     var navIcons = document.getElementsByClassName('ion-navicon');

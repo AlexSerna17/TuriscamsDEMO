@@ -1,5 +1,5 @@
 angular.module('filters')
-.controller('displayFilters', function ($scope, filterService) {
+.controller('displayFilters', function ($scope, filterService,$timeout) {
 
 	$scope.filterService = function(){
 
@@ -11,7 +11,11 @@ angular.module('filters')
       console.log(filtersData );
 
 
-    });
+
+    }).finally(function() {
+       // Stop the ion-refresher from spinning
+       $scope.$broadcast('scroll.refreshComplete');
+     });
 
             $scope.changeItem= function(item, index){
 				$scope.selected = index; 
@@ -26,6 +30,15 @@ angular.module('filters')
             }
 
 	};
+
+    $scope.doRefresh = function() {
+      $timeout(function() {
+          console.log("SI JALO");
+          $scope.$broadcast('scroll.refreshComplete');
+          // location.reload();
+          $scope.filterService();
+        }, 1250);
+  };
 
 	$scope.filterService();
 });

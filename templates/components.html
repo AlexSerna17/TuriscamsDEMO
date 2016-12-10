@@ -1,6 +1,7 @@
 ﻿
 <ion-view view-title="Ionic Components+">
-    <ion-content>
-       <div id="map-canvas"></div>
+    <ion-content >
+    	<ion-refresher pulling-text="Recargar" on-refresh="doRefresh()"></ion-refresher>
+       <div id="map-canvas" data-tap-disabled="true"></div>
     </ion-content>
 </ion-view>
