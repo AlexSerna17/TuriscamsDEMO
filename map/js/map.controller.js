@@ -1,5 +1,12 @@
 angular.module('map', ['ngMap'])
-.controller('mapController', function ($scope, NgMap) {
+.controller('mapController', function ($scope, NgMap, $timeout) {
+
+	  $scope.doRefresh = function() {
+      $timeout(function() {
+          $scope.$broadcast('scroll.refreshComplete');
+          location.reload();
+        }, 1250);
+  };
 
         NgMap.getMap().then(function (map) {
             $scope.map = map;
