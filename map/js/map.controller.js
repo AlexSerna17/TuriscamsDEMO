@@ -5,7 +5,7 @@ angular.module('map', ['ngMap'])
 
     this.markerData = function(){
 	
-	 var url = "http://turiscams.com/tkm/v1/map/marker/";
+	 var url = "http://turiscams.com/tkm/v1/map/marker/mobile";
 	
 			return $http({
 							
@@ -46,7 +46,7 @@ angular.module('map', ['ngMap'])
 
     mapService.markerData().success(function(pinData){
 
-        console.log(pinData[0].Geolocation.latitude);
+        // console.log(pinData[0].Geolocation.latitude);
  
 
 // .controller('mapController', function ($scope, NgMap, $timeout) {
@@ -72,16 +72,17 @@ angular.module('map', ['ngMap'])
         //     { id: 5, name: 'Paris', pos: [48.856127, 2.346525] }
         // ];
 
-        $scope.cities = [
+        // $scope.cities = [
 
-            {id: pinData[0]._id.$id, name: pinData[0].City, pos: [pinData[0].Geolocation.longitude,pinData[0].Geolocation.latitude]},
-            {id: pinData[1]._id.$id, name: pinData[1].City, pos: [pinData[1].Geolocation.longitude,pinData[1].Geolocation.latitude]},
-            {id: pinData[2]._id.$id, name: pinData[2].City, pos: [pinData[2].Geolocation.longitude,pinData[2].Geolocation.latitude]},
+        //     {id: pinData[0]._id.$id, name: pinData[0].City, pos: [pinData[0].Geolocation.longitude,pinData[0].Geolocation.latitude]},
+        //     {id: pinData[1]._id.$id, name: pinData[1].City, pos: [pinData[1].Geolocation.longitude,pinData[1].Geolocation.latitude]},
+        //     {id: pinData[2]._id.$id, name: pinData[2].City, pos: [pinData[2].Geolocation.longitude,pinData[2].Geolocation.latitude]},
             
 
-        ];     
+        // ];     
 
-
+        $scope.cities = pinData;
+        console.log($scope.cities);
 
 
         $scope.initMarkerClusterer = function () {
