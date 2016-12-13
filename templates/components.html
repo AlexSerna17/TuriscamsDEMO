@@ -10,13 +10,55 @@
             <info-window id="myInfoWindow">
                 <div ng-non-bindable>
                     <h4>{{selectedCity.name}}</h4>
+                    <img src='http://turiscams.com/v1/{{selectedCity.url}}/live.jpg' width='150' height='100'/>
                 </div>
             </info-window>
         </ng-map>
 
-    <!--<ion-content >
-
-       <div id="map-canvas" data-tap-disabled="true"></div>-->
+        <ion-scroll direction="x" class="carousel-map" >
+            <div class="carousel-map-content" >
+                <div class="carousel-map-img-content" ng-repeat="i in [1,2,3,4,5,6,7,8,9]">
+                    <div class="carrousel-map-img-content-info">
+                        <strong>Zacatecas,Zac</strong>
+                    </div>
+                    <img src="http://turiscams.com/v1/webcams/zacatecas//live.jpg" alt="">
+                </div>
+            </div>
+        </ion-scroll>
 
     </ion-content>
 </ion-view>
+
+<style>
+    .carousel-map {
+        background: #fff; 
+        padding: 3px 0px 3px 3px; 
+        height: 77px;
+    }
+    .carousel-map .scroll{
+        height: 100%;
+    }
+    .carousel-map-content{
+        width: max-content; 
+        width: -moz-max-content; 
+        width: -webkit-max-content; 
+        height: 100%; 
+        display: -webkit-box;
+    }
+    .carousel-map-img-content{
+        position: relative; 
+        height: 100%
+    }
+    .carousel-map-img-content img{
+        margin-right: 3px; 
+        height: 100%
+    }
+    .carrousel-map-img-content-info{
+        position: absolute; 
+        color: #fff; 
+        font-weight: bold; 
+        bottom: 0; 
+        width: 100%; 
+        text-align:center;
+    }
+</style>
