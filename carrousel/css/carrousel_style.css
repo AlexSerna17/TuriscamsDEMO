@@ -1,0 +1,31 @@
+.carousel-map {
+    background: #fff; 
+    padding: 3px 0px 3px 3px; 
+    height: 77px;
+}
+.carousel-map .scroll{
+    height: 100%;
+}
+.carousel-map-content{
+    width: max-content; 
+    width: -moz-max-content; 
+    width: -webkit-max-content; 
+    height: 100%; 
+    display: -webkit-box;
+}
+.carousel-map-img-content{
+    position: relative; 
+    height: 100%
+}
+.carousel-map-img-content img{
+    margin-right: 3px; 
+    height: 100%
+}
+.carrousel-map-img-content-info{
+    position: absolute; 
+    color: #fff; 
+    font-weight: bold; 
+    bottom: 0; 
+    width: 100%; 
+    text-align:center;
+}

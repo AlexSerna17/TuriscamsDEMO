@@ -3,20 +3,19 @@
     <ion-content>
 
        
-        <ng-map default-style="true" zoom="6" center="22.775713, -102.5745961">
+        <ng-map zoom="6" center="22.775713, -102.5745961" style="height: calc(100% - 77px) !important;">
 
            	<ion-refresher pulling-text="Recargar" on-refresh="doRefresh()"></ion-refresher>
        
             <info-window id="myInfoWindow">
                 <div ng-non-bindable>
                     <h4>{{selectedCity.name}}</h4>
+                    <img src='http://turiscams.com/v1/{{selectedCity.url}}/live.jpg' width='150' height='100'/>
                 </div>
             </info-window>
         </ng-map>
 
-    <!--<ion-content >
-
-       <div id="map-canvas" data-tap-disabled="true"></div>-->
+        <carrousel-cameras></carrousel-cameras>
 
     </ion-content>
 </ion-view>
