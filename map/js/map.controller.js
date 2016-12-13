@@ -94,11 +94,15 @@ angular.module('map', ['ngMap'])
         };
 
 
+        $scope.imageUrl = '/map/img/maker_tc.png';
+    	$scope.markerImage = new google.maps.MarkerImage($scope.imageUrl,new google.maps.Size(60, 60));
+
         $scope.createMarkerForCity = function (city) {
             console.log(city.pos[0]);
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(city.pos[0], city.pos[1]),
-                title: city.name
+                title: city.name,
+                icon: $scope.markerImage	
             });
             google.maps.event.addListener(marker, 'click', function () {
                 $scope.selectedCity = city;
