@@ -1,8 +1,12 @@
 ﻿
 <ion-view view-title="Ionic Components+">
     <ion-content>
+
        
         <ng-map default-style="true" zoom="6" center="22.775713, -102.5745961">
+
+           	<ion-refresher pulling-text="Recargar" on-refresh="doRefresh()"></ion-refresher>
+       
             <info-window id="myInfoWindow">
                 <div ng-non-bindable>
                     <h4>{{selectedCity.name}}</h4>
@@ -11,7 +15,7 @@
         </ng-map>
 
     <!--<ion-content >
-    	<ion-refresher pulling-text="Recargar" on-refresh="doRefresh()"></ion-refresher>
+
        <div id="map-canvas" data-tap-disabled="true"></div>-->
 
     </ion-content>

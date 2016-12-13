@@ -1,5 +1,6 @@
 angular.module('map', ['ngMap'])
 
+
 .service('mapService',function($http){
 
     this.markerData = function(){
@@ -47,6 +48,16 @@ angular.module('map', ['ngMap'])
 
         console.log(pinData[0].Geolocation.latitude);
  
+
+// .controller('mapController', function ($scope, NgMap, $timeout) {
+
+// 	  $scope.doRefresh = function() {
+//       $timeout(function() {
+//           $scope.$broadcast('scroll.refreshComplete');
+//           location.reload();
+//         }, 1250);
+//   };
+
 
         NgMap.getMap().then(function (map) {
             $scope.map = map;
