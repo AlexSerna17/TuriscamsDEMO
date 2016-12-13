@@ -1,0 +1,15 @@
+<link rel="stylesheet" type="text/css" href="carrousel/css/carrousel_style.css"/>
+
+<ion-scroll direction="x" class="carousel-map" >
+    <div class="carousel-map-content" >
+        <div class="carousel-map-img-content" data-ng-repeat="pic in pics" ng-if="pic.Url != null">
+            <div class="carrousel-map-img-content-info">
+                <strong>{{pic.City}}, {{pic.State}}</strong>
+            </div>
+            <img ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" alt="">
+        </div>
+    </div>
+</ion-scroll>
+	
+
+

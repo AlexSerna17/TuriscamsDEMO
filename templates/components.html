@@ -3,7 +3,7 @@
     <ion-content>
 
        
-        <ng-map default-style="true" zoom="6" center="22.775713, -102.5745961">
+        <ng-map zoom="6" center="22.775713, -102.5745961" style="height: calc(100% - 77px) !important;">
 
            	<ion-refresher pulling-text="Recargar" on-refresh="doRefresh()"></ion-refresher>
        
@@ -15,50 +15,7 @@
             </info-window>
         </ng-map>
 
-        <ion-scroll direction="x" class="carousel-map" >
-            <div class="carousel-map-content" >
-                <div class="carousel-map-img-content" ng-repeat="i in [1,2,3,4,5,6,7,8,9]">
-                    <div class="carrousel-map-img-content-info">
-                        <strong>Zacatecas,Zac</strong>
-                    </div>
-                    <img src="http://turiscams.com/v1/webcams/zacatecas//live.jpg" alt="">
-                </div>
-            </div>
-        </ion-scroll>
+        <carrousel-cameras></carrousel-cameras>
 
     </ion-content>
 </ion-view>
-
-<style>
-    .carousel-map {
-        background: #fff; 
-        padding: 3px 0px 3px 3px; 
-        height: 77px;
-    }
-    .carousel-map .scroll{
-        height: 100%;
-    }
-    .carousel-map-content{
-        width: max-content; 
-        width: -moz-max-content; 
-        width: -webkit-max-content; 
-        height: 100%; 
-        display: -webkit-box;
-    }
-    .carousel-map-img-content{
-        position: relative; 
-        height: 100%
-    }
-    .carousel-map-img-content img{
-        margin-right: 3px; 
-        height: 100%
-    }
-    .carrousel-map-img-content-info{
-        position: absolute; 
-        color: #fff; 
-        font-weight: bold; 
-        bottom: 0; 
-        width: 100%; 
-        text-align:center;
-    }
-</style>

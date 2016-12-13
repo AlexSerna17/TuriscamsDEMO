@@ -29,3 +29,5 @@ angular.module('map', ['ngMap']);
 // angular.module('histories',['ngMaterial','hm.readmore']);
 
 // angular.module('share', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
+
+angular.module('carrousel',[]);
