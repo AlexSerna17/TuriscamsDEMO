@@ -1,7 +1,7 @@
 //Módulo de home
 // angular.module('home', ['ngMaterial','menufilters','filters','tabbar']);
 //Módulo de listado de IETR  con la inyección de menú
-angular.module('filters', []);
+angular.module('filters', ['ionRate']);
 
 //Módulo de menu para el listado de IETR
 angular.module('menufilters',[]); 
