@@ -82,7 +82,7 @@ angular.module('map', ['ngMap'])
         // ];     
 
         $scope.cities = pinData;
-        console.log($scope.cities);
+        // console.log($scope.cities);
 
 
         $scope.initMarkerClusterer = function () {
@@ -98,7 +98,7 @@ angular.module('map', ['ngMap'])
     	$scope.markerImage = new google.maps.MarkerImage($scope.imageUrl,new google.maps.Size(60, 60));
 
         $scope.createMarkerForCity = function (city) {
-            console.log(city.pos[0]);
+            // console.log(city.pos[0]);
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(city.pos[0], city.pos[1]),
                 title: city.name,

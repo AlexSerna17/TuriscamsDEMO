@@ -1,5 +1,5 @@
 ﻿
-<ion-view view-title="Ionic Components+">
+<ion-view view-title="Cámaras">
     <ion-content>
 
        
@@ -8,9 +8,18 @@
            	<ion-refresher pulling-text="Recargar" on-refresh="doRefresh()"></ion-refresher>
        
             <info-window id="myInfoWindow">
-                <div ng-non-bindable>
-                    <h4>{{selectedCity.name}}</h4>
-                    <img src='http://turiscams.com/v1/{{selectedCity.url}}/live.jpg' width='150' height='100'/>
+                <div ng-non-bindable layout="row" layout-align="center center" >
+                    <div>
+                      <img  ng-if="selectedCity.url != null" src='http://turiscams.com/v1/{{selectedCity.url}}/live.jpg'  height='65'/> 
+                    </div>
+                    <div layout="column" layout-align="center center" style="margin-left: 12px;">
+                        <label>{{selectedCity.name}}, {{selectedCity.state}}</label>
+                        <label for="" style="color: #afafaf;">{{selectedCity.nameCamera}}</label>
+                        <ion-rate maximum="maximumRate" rate="selectedCity.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>  
+                        <md-button class="" ng-href="{{selectedCity.link}}" targert="_blank" aria-label="Favorite">
+                           <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
+                        </md-button>
+                    </div>
                 </div>
             </info-window>
         </ng-map>

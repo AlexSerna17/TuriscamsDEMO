@@ -5,7 +5,7 @@ angular.module('carrousel')
 
     this.gestCameras = function(){
 
-        return $http.get('https://patito-software.cloud.tyk.io/filters/IETR').then(
+        return $http.get('http://turiscams.com/tkm/v1/map/marker/mobile').then(
             function (response) {
                 return{
                     cameras:response.data,                    

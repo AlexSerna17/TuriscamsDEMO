@@ -4,7 +4,7 @@ angular.module('carrousel')
 	return {
 		restrict: 'E',
 		templateUrl: 'carrousel/templates/carrousel.html',
-		controller: 'displayFilters',
+		controller: 'carrouselCtrl',
 		controllerAs: 'ctrl'
 	}
 });

@@ -40,7 +40,7 @@
 }
 .star-ratings-css::after {
   color: gold;
-  content: '★★★★';
+  content: '★★★★★';
   text-shadow: 0 1px 0 #ab5414;
   position: absolute;
   z-index: 1;

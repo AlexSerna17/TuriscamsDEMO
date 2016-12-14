@@ -18,7 +18,7 @@ angular.module('tabbar', []);
 
 // angular.module('ranking', ['ngAnimate', 'ngSanitize', 'ui.bootstrap','ngCookies']);
 
-angular.module('map', ['ngMap']);
+angular.module('map', ['ngMap','ionRate']);
 
 // angular.module('pics', ['ngMaterial', 'ngAnimate', 'ngSanitize', 'ngAria']);
 
@@ -30,4 +30,4 @@ angular.module('map', ['ngMap']);
 
 // angular.module('share', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
 
-angular.module('carrousel',[]);
+angular.module('carrousel',['ionRate']);
