@@ -40,5 +40,9 @@ angular.module('filters')
         }, 1250);
   };
 
+  $scope.share = function(city,name,link){
+   // window.plugins.socialsharing.share('Message, subject, image and link', 'The subject', 'https://www.google.nl/images/srpr/logo4w.png', 'http://www.x-services.nl');
+   window.plugins.socialsharing.share('Cámara de '+name+' ubicada en '+ city, 'Turiscams','http://turiscams.com/v1/'+link+'/live.jpg', 'http://turiscams.com/web');
+  }
 	$scope.filterService();
 });
