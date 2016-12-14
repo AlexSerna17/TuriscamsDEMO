@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="filters/css/filter_style.css"/>
 
 	<div flex="50" >
-      <md-card data-ng-repeat="pic in pics" ng-if="pic.Url != null && $even">
+      <md-card data-ng-repeat="pic in pics" ng-if="pic.Url != null && $even" layout="column" layout-align="center center">
         <img ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" class="md-card-image" alt="{{pic.City}}, {{pic.State}}">
         <md-card-title>
           <md-card-title-text>
@@ -11,25 +11,25 @@
         <md-card-content class="md-card-content">
         	<p><strong>{{pic.City}}, {{pic.State}}</strong></p>
         </md-card-content>
-        <md-card-actions layout="column" layout-align="center center">
-        	<div layout="row" layout-align="center center">
-        		<md-button class="md-icon-button"  targert="_blank" aria-label="Favorite">
-			       <md-icon class="turis-favorite" aria-label="Home"></md-icon>
-			    </md-button>
-				<ion-rate maximum="maximumRate" rate="pic.rating" color="color" select-star="selectedStar(rating,$index)"></ion-rate>
-			    <md-button class="md-icon-button"  onclick="window.plugins.socialsharing.share('Cámara chúpala', null, null, 'https://www.facebook.com/AlexSerna17?ref=bookmarks')"aria-label="Favorite">
-			        <md-icon class="turis-share" aria-label="Home"></md-icon>
-			    </md-button>
-        	</div>
-          	<md-button class="" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="Favorite">
-		       <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
+
+        <div layout="row" layout-align="space-between center" style="margin-bottom: -10px;">
+    		<md-button class="md-icon-button"  targert="_blank" aria-label="Favorite">
+		       <md-icon class="turis-favorite" aria-label="Home"></md-icon>
 		    </md-button>
-        </md-card-actions>
+			<ion-rate style="" maximum="5" rate="2" color="color" select-star="selectedStar(rating,$index)"></ion-rate>
+		    <md-button class="md-icon-button"  onclick="window.plugins.socialsharing.share('Cámara chúpala', null, null, 'https://www.facebook.com/AlexSerna17?ref=bookmarks')" aria-label="Favorite">
+		        <md-icon class="turis-share" aria-label="Home"></md-icon>
+		    </md-button>
+        </div>
+      	<md-button class="md-icon-button" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="Favorite">
+	       <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
+	    </md-button>
       </md-card>
     </div>
 
-   	<div flex="50" >
-      <md-card data-ng-repeat="pic in pics" ng-if="pic.Url != null && $odd">
+
+    <div flex="50" >
+      <md-card data-ng-repeat="pic in pics" ng-if="pic.Url != null && $odd" layout="column" layout-align="center center">
         <img ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" class="md-card-image" alt="{{pic.City}}, {{pic.State}}">
         <md-card-title>
           <md-card-title-text>
@@ -39,26 +39,28 @@
         <md-card-content class="md-card-content">
         	<p><strong>{{pic.City}}, {{pic.State}}</strong></p>
         </md-card-content>
-        <md-card-actions layout="column" layout-align="center center">
-			<div layout="row" layout-align="space-around center">
-        		<md-button class="md-icon-button"  targert="_blank" aria-label="Favorite">
-			       <md-icon class="turis-favorite" aria-label="Home"></md-icon>
-			    </md-button>
-				<ion-rate maximum="maximumRate" rate="pic.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>
-			    <md-button class="md-icon-button"  onclick="window.plugins.socialsharing.share('Cámara chúpala', null, null, 'https://www.facebook.com/AlexSerna17?ref=bookmarks')"aria-label="Favorite">
-			        <md-icon class="turis-share" aria-label="Home"></md-icon>
-			    </md-button>
-        	</div>
-         	<md-button class="" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="Favorite">
-		       <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
+
+        <div layout="row" layout-align="space-between center" style="margin-bottom: -10px;">
+    		<md-button class="md-icon-button"  targert="_blank" aria-label="Favorite">
+		       <md-icon class="turis-favorite" aria-label="Home"></md-icon>
 		    </md-button>
-        </md-card-actions>
+			<ion-rate style="" maximum="5" rate="2" color="color" select-star="selectedStar(rating,$index)"></ion-rate>
+		    <md-button class="md-icon-button"  onclick="window.plugins.socialsharing.share('Cámara chúpala', null, null, 'https://www.facebook.com/AlexSerna17?ref=bookmarks')" aria-label="Favorite">
+		        <md-icon class="turis-share" aria-label="Home"></md-icon>
+		    </md-button>
+        </div>
+      	<md-button class="md-icon-button" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="Favorite">
+	       <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
+	    </md-button>
       </md-card>
     </div>
 	
 <style>
 	.ion-rating {
   display: inline-block;
+      width: max-content;
+    width: -moz-max-content;
+    width: -webkit-max-content;
 }
 .ion-rating ul {
   margin: 0;
