@@ -9,7 +9,7 @@ angular.module('tabbar')
 		'icon': 'turis-home',
 		'url': '#/app/home',
 	},{
-		'tittle':'Càmaras',
+		'tittle':'Cámaras',
 		'icon': 'turis-cameralocation',
 		'url': '#app/components',
 	},{
@@ -21,7 +21,7 @@ angular.module('tabbar')
 		'icon': 'turis-search',
 		'url': '#/search',
 	},{
-		'tittle':'Màs',
+		'tittle':'Más',
 		'icon': 'turis-shareios',
 		'url': '#/terms',
 	}];
