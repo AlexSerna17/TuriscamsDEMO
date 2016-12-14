@@ -94,7 +94,7 @@ angular.module('map', ['ngMap'])
         };
 
 
-        $scope.imageUrl = '/map/img/maker_tc.png';
+        $scope.imageUrl = 'map/img/maker_tc.png';
     	$scope.markerImage = new google.maps.MarkerImage($scope.imageUrl,new google.maps.Size(60, 60));
 
         $scope.createMarkerForCity = function (city) {
