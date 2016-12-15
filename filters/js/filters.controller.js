@@ -33,10 +33,9 @@ angular.module('filters')
 
     $scope.doRefresh = function() {
       $timeout(function() {
-          console.log("SI JALO");
+          $scope.filterService();
           $scope.$broadcast('scroll.refreshComplete');
           // location.reload();
-          $scope.filterService();
         }, 1250);
   };
 

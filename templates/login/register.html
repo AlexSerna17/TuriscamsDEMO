@@ -1,28 +1,24 @@
-<ion-view view-title="Registro">
+<ion-view view-title="">
 	<ion-nav-bar class="bar-login" style="box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0) !Important; color: #fff;">
             <ion-nav-back-button class="no-text">
             </ion-nav-back-button>
             <ion-nav-buttons side="left">
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
             </ion-nav-buttons>
+             <ion-nav-title>
+		      <img src="login/css/images/logo.png" alt="" style="margin-bottom: -9px; width: 110px;">
+		    </ion-nav-title>
             <ion-nav-buttons side="right">
                 <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
             </ion-nav-buttons>
-        </ion-nav-bar>
+    </ion-nav-bar>
     <ion-content class="img_fondo_login" back-img="{{image}}">
-    	<!-- <ion-nav-bar class="bar-login" style="box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0) !Important; color: #fff; margin-top: 25px;">
-            <ion-nav-back-button class="no-text">
-            </ion-nav-back-button>
-            <ion-nav-buttons side="left">
-                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
-            </ion-nav-buttons>
-            <ion-nav-buttons side="right">
-                <button class="button button-icon button-clear turis" id="menu-popover" ng-click="popover.show($event)"></button>
-            </ion-nav-buttons>
-        </ion-nav-bar> -->
-	   	<img src="login/css/images/logo.png" alt="" id="img_logo_login">
+		
 
-	   	<form class="text-center" ng-submit="register()" name="tkm_register" ng-controller="signupCtrl" style="position: absolute; width: 100%; bottom: 0; padding: 0 5px 10px 5px; text-align: center;">
+		<div class="tittle-screen-login">Resgitro</div>
+		<div class="subtitle-screen-login">Registrate y ¡disfruta de todo lo que tenemos para ti!</div>
+
+	   	<form class="text-center" ng-submit="register()" name="tkm_register" ng-controller="signupCtrl">
 	      	<div class="register-container">
 				<md-input-container md-no-float="" class="md-block web-input-orange">
 					<input type="text" name="name" ng-model="name" id="name" placeholder="Nombre" required maxlength="30" />
@@ -75,7 +71,7 @@
 					<div layout-wrap layout-gt-sm="row" >
 						<div flex-gt-sm="50">
 							<md-checkbox md-no-ink aria-label="" ng-model="conditions"  name="conditions" required>
-								Acepto los <a ng-click="modal.show()" class="text-terms">Términos y Condiciones</a>
+								Acepto los <a ng-click="modal.show()" class="text-terms">Términos y Condiciones</a> y la <a ng-click="modal.show()" class="text-terms">Politíca de privacidad </a> de Turiscams&reg;
 							</md-checkbox>
 						</div>
 					</div>

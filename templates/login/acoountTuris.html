@@ -7,76 +7,59 @@
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
             </ion-nav-buttons>
              <ion-nav-title>
-		      <img src="login/css/images/logo.png" alt="" style="margin-bottom: -8px; width: 90px;">
+		      <img src="login/css/images/logo.png" alt="" style="margin-bottom: -9px; width: 110px;">
 		    </ion-nav-title>
             <ion-nav-buttons side="right">
                 <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
             </ion-nav-buttons>
-        </ion-nav-bar>
+    </ion-nav-bar>
 
     <ion-content class="img_fondo_login" back-img="{{image}}">
-<!--     	<ion-nav-bar class="bar-login">
-            <ion-nav-back-button class="no-text">
-            </ion-nav-back-button>
-            <ion-nav-buttons side="left">
-                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
-            </ion-nav-buttons>
-            <ion-nav-buttons side="right">
-                <button class="button button-icon button-clear turis" id="menu-popover" ng-click="popover.show($event)"></button>
-            </ion-nav-buttons>
-        </ion-nav-bar> -->
+    	<div class="tittle-screen-login">Iniciar sesión</div>
+    	<div class="subtitle-screen-login">Descubre tus destinos favoritos con imágenes en tiempo real</div>
+    	<form class="text-center" ng-submit="login_details()" name="login_tkm" novalidate ng-controller="loginCtrl ">
+    		<div class="login-container" style="" >
+    			<md-input-container md-no-float="" class="md-block web-input-orange" flex-gt-sm>
+    				<input type="email" name="email" ng-model="email" placeholder="Correo electrónico" required ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/" />	
+    				<div ng-messages="login_tkm.email.$error"  ng-show="login_tkm.email.$touched || login_tkm.email.$submitted" multiple="" md-auto-hide="false" style="text-align: center;">
+    					<div ng-message="required">
+    						Correo electrónico requerido.
+    					</div>
+
+    					<div ng-message="pattern">
+    						Ingresa un correo electrónico válido.
+    					</div>
+    				</div>
+    			</md-input-container>
+
+    			<md-input-container md-no-float="" class="md-block web-input-orange">
+    				<input type="{{inputType}}" name="password" ng-model="password" placeholder="Contraseña" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/" required minlength="8" maxlength="30" />
+    				<div ng-messages="login_tkm.password.$error" ng-show="login_tkm.password.$touched || login_tkm.password.$submitted" multiple="" md-auto-hide="false">
+    					<div ng-message="required">
+    						Contraseña requerida.
+    					</div>
+
+    					<div ng-message="pattern">
+    						Ingresa al menos 8 caracteres (letras y números).  
+    					</div>
+    				</div>
+    			</md-input-container>
 
 
+    			<fieldset class="standard">
+    				<div layout-wrap layout-gt-sm="row" >
+    					<div flex-gt-sm="50">
+    						<md-checkbox md-no-ink aria-label="" ng-model="passwordCheckbox" ng-click="hideShowPassword()">
+    							Mostrar contraseña
+    						</md-checkbox>
+    					</div>
+    				</div>
+    			</fieldset>
 
-	        <!-- <img src="login/css/images/logo.png" alt="" id="img_logo_login"> -->
-
-		        <div class="" style="position: absolute; width: 100%; bottom: 0; padding: 0 5px 10px 5px;">
-		        	<form class="text-center" ng-submit="login_details()" name="login_tkm" novalidate ng-controller="loginCtrl ">
-		        		<div class="login-container" style="" >
-		        			<md-input-container md-no-float="" class="md-block web-input-orange" flex-gt-sm>
-		        				<input type="email" name="email" ng-model="email" placeholder="Correo electrónico" required ng-pattern="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)?(\.[a-z]{2,3})$/" />	
-		        				<div ng-messages="login_tkm.email.$error"  ng-show="login_tkm.email.$touched || login_tkm.email.$submitted" multiple="" md-auto-hide="false" style="text-align: center;">
-		        					<div ng-message="required">
-		        						Correo electrónico requerido.
-		        					</div>
-
-		        					<div ng-message="pattern">
-		        						Ingresa un correo electrónico válido.
-		        					</div>
-		        				</div>
-		        			</md-input-container>
-
-		        			<md-input-container md-no-float="" class="md-block web-input-orange">
-		        				<input type="{{inputType}}" name="password" ng-model="password" placeholder="Contraseña" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/" required minlength="8" maxlength="30" />
-		        				<div ng-messages="login_tkm.password.$error" ng-show="login_tkm.password.$touched || login_tkm.password.$submitted" multiple="" md-auto-hide="false">
-		        					<div ng-message="required">
-		        						Contraseña requerida.
-		        					</div>
-
-		        					<div ng-message="pattern">
-		        						Ingresa al menos 8 caracteres (letras y números).  
-		        					</div>
-		        				</div>
-		        			</md-input-container>
-
-
-		        			<fieldset class="standard">
-		        				<div layout-wrap layout-gt-sm="row" >
-		        					<div flex-gt-sm="50">
-		        						<md-checkbox md-no-ink aria-label="" ng-model="passwordCheckbox" ng-click="hideShowPassword()">
-		        							Mostrar contraseña
-		        						</md-checkbox>
-		        					</div>
-		        				</div>
-		        			</fieldset>
-
-		        		</div>
-		        		<button type="submit" class="button btn-login button-block btn_pass_login" ng-form-loader="login_details()" ng-disabled="login_tkm.$invalid"><strong>Iniciar sesión</strong></button>
-		        		<a href="#/app/login/account/resetPass" class="text-white"><strong>¿Olvidaste tu contraseña?</strong></a>
-		        	</form>
-
-		        </div>
-    	
+    		</div>
+    		<button type="submit" class="button btn-login button-block btn_pass_login" ng-form-loader="login_details()" ng-disabled="login_tkm.$invalid"><strong>Iniciar sesión</strong></button>
+    		<a href="#/app/login/account/resetPass" class="text-white"><strong>¿Olvidaste tu contraseña?</strong></a>
+    	</form>
     </ion-content>
 
 </ion-view>
