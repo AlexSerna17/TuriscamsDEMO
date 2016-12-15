@@ -44,7 +44,8 @@ body{
     margin-top: 0px !important;
     height: 44px;
     text-transform: inherit !important;
-    font-size: 15px;
+    font-size: 20px; /*antes 15 y sin bold*/
+    font-weight: bold;
     padding: 0 10px !important;
 }
 

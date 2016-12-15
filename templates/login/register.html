@@ -15,8 +15,8 @@
     <ion-content class="img_fondo_login" back-img="{{image}}">
 		
 
-		<div class="tittle-screen-login">Resgitro</div>
-		<div class="subtitle-screen-login">Registrate y ¡disfruta de todo lo que tenemos para ti!</div>
+		<div class="tittle-screen-login">Resgistro</div>
+		<div class="subtitle-screen-login">¡Regístrate y disfruta de todo lo que tenemos para ti!</div>
 
 	   	<form class="text-center" ng-submit="register()" name="tkm_register" ng-controller="signupCtrl">
 	      	<div class="register-container">
@@ -71,7 +71,7 @@
 					<div layout-wrap layout-gt-sm="row" >
 						<div flex-gt-sm="50">
 							<md-checkbox md-no-ink aria-label="" ng-model="conditions"  name="conditions" required>
-								Acepto los <a ng-click="modal.show()" class="text-terms">Términos y Condiciones</a> y la <a ng-click="modal.show()" class="text-terms">Politíca de privacidad </a> de Turiscams&reg;
+								Acepto los <a ng-click="modal.show()" class="text-terms">Términos y Condiciones</a> y la <a ng-click="modal.show()" class="text-terms">Política de privacidad </a> de Turiscams&reg;
 							</md-checkbox>
 						</div>
 					</div>
@@ -87,7 +87,7 @@
       <ion-modal-view ng-controller="termsCtrl">
         <ion-header-bar class="bar bar-header bar-positive bar-turiscams">
           <button class="button button-clear button-primary icon-left-A ion-chevron-left" ng-click="modal.hide()" style="font-size: 12px; font-weight: bold; padding-left: 10px; height: 44px; max-width: 80px; width: 72px;"> Volver</button>
-          <h1 class="title" >Términos y condiciones</h1>
+          <h1 class="title" >Términos y Condiciones</h1>
         </ion-header-bar>
         <ion-content class="padding" style="text-align: justify;">
         {{termsConditions}} 
