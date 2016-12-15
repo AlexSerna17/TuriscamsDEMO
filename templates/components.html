@@ -8,18 +8,26 @@
            	<ion-refresher pulling-text="Recargar" on-refresh="doRefresh()"></ion-refresher>
        
             <info-window id="myInfoWindow">
-                <div ng-non-bindable layout="row" layout-align="center center" >
-                    <div>
-                      <img  ng-if="selectedCity.url != null" src='http://turiscams.com/v1/{{selectedCity.url}}/live.jpg'  height='65'/> 
+                <div ng-non-bindable layout="row">
+                    <img  ng-if="selectedCity.url != null" src='http://turiscams.com/v1/{{selectedCity.url}}/live.jpg'  height='65'/> 
+
+                    <div layout="column" style="margin-left: 10px;">
+                        <div class="map-info-state">
+                            {{selectedCity.name}}, {{selectedCity.state}}
+                        </div>
+                        <div layout="column" class="map-info-description">
+                            {{selectedCity.nameCamera}}
+                            <ion-rate maximum="maximumRate" rate="selectedCity.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate> 
+                        </div>
                     </div>
-                    <div layout="column" layout-align="center center" style="margin-left: 12px;">
-                        <label>{{selectedCity.name}}, {{selectedCity.state}}</label>
-                        <label for="" style="color: #afafaf;">{{selectedCity.nameCamera}}</label>
-                        <ion-rate maximum="maximumRate" rate="selectedCity.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>  
-                        <md-button class="md-icon-button" ng-href="{{selectedCity.link}}" targert="_blank" aria-label="Favorite" style="margin-top: -10px">
-                           <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
-                        </md-button>
-                        <label for="" style="margin-top: -15px">Reservar</label>
+                    <div layout="column" style="width: 35px;">
+                        <div class="map-content-column-res">
+                           <md-button class="md-icon-button" ng-href="{{selectedCity.link}}" targert="_blank" aria-label="Favorite">
+                                <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
+                            </md-button>
+                            <label>Reservar</label> 
+                        </div>
+                            
                     </div>
                 </div>
             </info-window>
@@ -29,3 +37,8 @@
 
     </ion-content>
 </ion-view>
+<style>
+  .ng-map-info-window {
+        box-shadow: 0px 1px 5px 2px rgba(185,191,203,0.8) !important;
+  }
+</style>
