@@ -1,8 +1,8 @@
 angular.module('carrousel')
-.controller('carrouselCtrl', function ($scope, carrouselService,$timeout) {
+.controller('carrouselCtrl', function ($scope, carrouselService,$timeout,$ionicLoading) {
 
 	$scope.carrouselService = function(){
-
+		$scope.show($ionicLoading);// Muestra Spinner
 		carrouselService.gestCameras()
 		.then(function(filtersData){
 			$scope.pics = filtersData.cameras;
@@ -16,9 +16,22 @@ angular.module('carrousel')
 
 
 
-    	});
+    	}).finally(function() {
+	        $scope.hide($ionicLoading);  // Oculpa Spinner
+	     });
 
 	};
+
+	  $scope.show = function() {
+    $ionicLoading.show({
+      template: ' <md-icon md-svg-src="css/icons/spinner-movil.svg" style="width: 100px; height: 100px;"></md-icon>'
+    });
+  };
+
+  $scope.hide = function(){
+      $ionicLoading.hide();
+  };
+
 
 	$scope.carrouselService();
 });
