@@ -16,9 +16,10 @@
                         <label>{{selectedCity.name}}, {{selectedCity.state}}</label>
                         <label for="" style="color: #afafaf;">{{selectedCity.nameCamera}}</label>
                         <ion-rate maximum="maximumRate" rate="selectedCity.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>  
-                        <md-button class="" ng-href="{{selectedCity.link}}" targert="_blank" aria-label="Favorite">
+                        <md-button class="md-icon-button" ng-href="{{selectedCity.link}}" targert="_blank" aria-label="Favorite" style="margin-top: -10px">
                            <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
                         </md-button>
+                        <label for="" style="margin-top: -15px">Reservar</label>
                     </div>
                 </div>
             </info-window>
