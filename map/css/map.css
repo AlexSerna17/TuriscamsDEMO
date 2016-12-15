@@ -6,3 +6,36 @@
 	height: 100%;
 	width: 100%;  
 }
+.map-info-state{
+	font-size: 14px; 
+	width: 135px; 
+	text-overflow: ellipsis; 
+	white-space: nowrap; 
+	overflow: hidden;
+}
+.map-info-description{
+	width: 130px; 
+	height: 45px; 
+	text-overflow: 
+	ellipsis; 
+	white-space: 
+	nowrap; 
+	overflow: 
+	hidden; 
+	color: #b4b4b4;
+}
+.map-content-column-res{
+	position: absolute; 
+	bottom: 0;
+}
+.map-content-column-res .md-icon-button{
+	margin-bottom: -15px;
+}
+
+.map-content-column-res .md-icon-button md-icon{
+	color: #284895;
+}
+.map-content-column-res label{
+	margin-top: -15px; 
+	color: #b9b9b9;
+}

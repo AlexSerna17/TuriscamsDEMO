@@ -5,7 +5,7 @@
         <div class="carousel-map-img-content" data-ng-repeat="pic in pics">
             <div class="carrousel-map-img-content-info">
             	<ion-rate maximum="maximumRate" rate="pic.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>
-                <strong>{{pic.name}}</strong>
+                <strong>{{pic.stateAcronym}}</strong>
             </div>
             <img ng-src="http://turiscams.com/v1/{{pic.url}}/live.jpg" alt="">
         </div>
