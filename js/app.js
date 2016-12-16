@@ -72,11 +72,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         }
     })
 
-    .state('app.components', {
-        url: '/components',
+    .state('app.cameras', {
+        url: '/cameras',
         views: {
             'menuContent': {
-                templateUrl: 'templates/components.html',
+                templateUrl: 'templates/cameras.html',
                 controller: 'mapController'
             }
         }

@@ -24,7 +24,7 @@ angular.module('carrousel')
 
 	  $scope.show = function() {
     $ionicLoading.show({
-      template: ' <md-icon md-svg-src="css/icons/spinner-movil.svg" style="width: 100px; height: 100px;"></md-icon>'
+      template: ' <md-icon md-svg-src="css/icons/spinner-movil.svg" class="loader-turiscams-icon"></md-icon>'
     });
   };
 
