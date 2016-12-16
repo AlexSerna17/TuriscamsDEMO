@@ -58,7 +58,7 @@ app.controller('userCtrl',function($scope, $cookies){
         var user_data = $cookies.getObject('user_data');
         $scope.username = user_data.username;
         $scope.pic = user_data.profile_pic;
-        console.log(user_data.profile_pic + " Aquì");
+        console.log(user_data);
     }else{
         $scope.username=" ";
     } 
