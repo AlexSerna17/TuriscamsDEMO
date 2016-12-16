@@ -11,7 +11,7 @@ angular.module('tabbar')
 	},{
 		'tittle':'Cámaras',
 		'icon': 'turis-cameralocation',
-		'url': '#app/components',
+		'url': '#app/cameras',
 	},{
 		'tittle':'Reservas',
 		'icon': 'turis-reservations',

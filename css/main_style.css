@@ -49,7 +49,10 @@
     background-image: linear-gradient(0deg, #294996, #294996 50%, transparent 50%);
     color: #fff;
 }
-
+/*Imagen de la barra de tñitulos*/
+.bar-img-logo-turiscams{
+    margin-bottom: -9px; width: 110px;
+}
 /*iconos drawer*/
 .icon-item-draw{
     font-size: 12px !important; 
@@ -58,4 +61,14 @@
 .draw-arrown{
     font-size: 21px !important;
     color: #d8d8d8 !important;
+}
+/*icono de loader turiscams*/
+.loader-turiscams-icon{
+    width: 100px; 
+    height: 100px;
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
 }
