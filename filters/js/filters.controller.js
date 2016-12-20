@@ -63,24 +63,24 @@ angular.module('filters')
 
 	};
 
-    $scope.doRefresh = function() {
-      $timeout(function() {
-          filterService.gestList("IETR")
-          .then(function(filtersData){
-            $scope.pics = filtersData.cameras;
-            $scope.menu = filtersData.cameras.menu;
-            $scope.kind = filtersData.cameras.kind;
-            console.log(filtersData );
+  //   $scope.doRefresh = function() {
+  //     $timeout(function() {
+  //         filterService.gestList("IETR")
+  //         .then(function(filtersData){
+  //           $scope.pics = filtersData.cameras;
+  //           $scope.menu = filtersData.cameras.menu;
+  //           $scope.kind = filtersData.cameras.kind;
+  //           console.log(filtersData );
 
 
 
-          }).finally(function() {
-              $scope.hide($ionicLoading);  
-             $scope.$broadcast('scroll.refreshComplete');
-           });
-          // location.reload();
-        }, 1250);
-  };
+  //         }).finally(function() {
+  //             $scope.hide($ionicLoading);  
+  //            $scope.$broadcast('scroll.refreshComplete');
+  //          });
+  //         // location.reload();
+  //       }, 1250);
+  // };
 
   $scope.share = function(city,name,link){
    // window.plugins.socialsharing.share('Message, subject, image and link', 'The subject', 'https://www.google.nl/images/srpr/logo4w.png', 'http://www.x-services.nl');
