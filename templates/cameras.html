@@ -9,7 +9,7 @@
        
             <info-window id="myInfoWindow">
                 <div ng-non-bindable layout="row">
-                    <img  ng-if="selectedCity.url != null" src='http://turiscams.com/v1/{{selectedCity.url}}/live.jpg'  height='65'/> 
+                    <img  ng-if="selectedCity.url != null" ng-src='http://turiscams.com/v1/{{selectedCity.url}}/live.jpg'  height='65'/> 
 
                     <div layout="column" style="margin-left: 10px;">
                         <div class="map-info-state">

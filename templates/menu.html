@@ -22,9 +22,9 @@
         <ion-nav-view name="menuContent"></ion-nav-view>
     </ion-side-menu-content>
     <ion-side-menu side="left">
-        <ion-header-bar class="expanded" style="background-image: url({{cover}});" >
+        <ion-header-bar class="expanded" ng-style="{'background-image':'url('+cover+')'}">
             <img src="img/profile.jpg" ng-if="username == ' '" class="avatar motion spin fade">
-            <img src="{{pic}}" ng-if="username != ' '" class="avatar motion spin fade">
+            <img ng-src="{{pic}}" ng-if="username != ' '" class="avatar motion spin fade">
             <div class="menu-bottom text-center">
                 {{username}} <br>
                 <label><a href="" class="link_white" ng-if="username != ' '">Pulsa aqui para ver o editar tu perfil</a></label>
