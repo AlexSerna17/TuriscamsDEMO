@@ -62,7 +62,7 @@ app.controller('userCtrl',function($scope, $cookies){
         console.log(user_data);
     }else{
         $scope.username=" ";
-        $scope.cover =  "../img/banner_perfil.jpg";
+        $scope.cover =  "img/banner_perfil.jpg";
     } 
 
     $scope.closeSesion = function(){
