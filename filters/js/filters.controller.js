@@ -1,5 +1,38 @@
 angular.module('filters')
-.controller('displayFilters', function ($scope, filterService, $timeout, $ionicLoading) {
+.controller('displayFilters', function ($scope, filterService, $timeout, $ionicLoading, $http) {
+
+       $scope._list = [];
+       $scope.list = [];
+     var from = 0;
+     $scope.populateList = function() {
+         populateLists();
+     }
+     $scope.canWeLoadMoreContent = function() {
+         return ($scope._list.length >= $scope.list.length-3) ? false : true;
+     }
+     populateLists();
+
+     function populateLists() {
+         filterService.gestList("IETR").then(function(data){
+             $scope.list = Object.keys(data.cameras);
+             var limit = from + 4;
+             for (var i = from; i <= limit; i++) {
+                 console.log($scope.list[i]);
+                 // console.log(data.cameras[$scope.list[i]]["City"]);
+                 $scope._list.push({
+                     Name: data.cameras[$scope.list[i]]["Name"],
+                     City: data.cameras[$scope.list[i]]["City"],
+                     State: data.cameras[$scope.list[i]]["State"],
+                     Url: data.cameras[$scope.list[i]]["Url"],
+                     Reference_Url_Mobile: data.cameras[$scope.list[i]]["Reference_Url_Mobile"],
+                     heigth: Math.random() * (300 - 200) + 200,
+                 });
+                 from = i;
+             }
+             $scope.$broadcast('scroll.infiniteScrollComplete');
+         });
+     }
+
 
 	$scope.filterService = function(){
     $scope.show($ionicLoading);// Muestra Spinner
@@ -8,7 +41,7 @@ angular.module('filters')
 			$scope.pics = filtersData.cameras;
       $scope.menu = filtersData.cameras.menu;
       $scope.kind = filtersData.cameras.kind;
-      console.log(filtersData );
+      // console.log(filtersData );
 
 
 
