@@ -58,9 +58,11 @@ app.controller('userCtrl',function($scope, $cookies){
         var user_data = $cookies.getObject('user_data');
         $scope.username = user_data.username;
         $scope.pic = user_data.profile_pic;
+        $scope.cover =  user_data.cover_pic;
         console.log(user_data);
     }else{
         $scope.username=" ";
+        $scope.cover =  "../img/banner_perfil.jpg";
     } 
 
     $scope.closeSesion = function(){

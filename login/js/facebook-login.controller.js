@@ -97,16 +97,13 @@ angular.module('facebook')
 								user_id: response.data.user_id._id.$id,
 								email: response.data.user_id.email,
 								username: response.data.user_id.user_details.name,
-								profile_pic: response.data.user_id.user_details.profile_url
-								
+								profile_pic: response.data.user_id.user_details.profile_url,
+								cover_pic: response.data.user_id.user_details.cover
 							};
 							
-								console.log(user_data);
-							
 								$cookies.putObject('user_data', user_data, {path: "/"});
+								window.location.href = "home.html";
 
-								//location.href = "home"
-								 window.location.href = "home.html";
 							}, function errorCallback(response){
 
 								console.log(response);
