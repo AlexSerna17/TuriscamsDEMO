@@ -1,6 +1,28 @@
 <ion-view view-title="">
     <ion-content >
     	<ion-refresher pulling-text="Recargar" on-refresh="populateList()"></ion-refresher>
+    	
+    		<md-card  layout="column" layout-align="center center">
+            <img ng-src="http://turiscams.com/v1/webcams/zacatecas/live.jpg" class="md-card-image" alt="{{pic.City}}, {{pic.State}}" style="height: {{pic.heigth}}px !important; padding: 7px 5px 0px 7px; object-fit: cover;">
+            <md-card-title>
+              <md-card-title-text>
+            	Imagen en tiempo real
+              </md-card-title-text>
+            </md-card-title>
+
+            <div layout="row" layout-align="center center" style="margin-bottom: -10px;">
+              <!-- <md-button class="md-icon-button"  targert="_blank" aria-label="Favorite">
+                 <md-icon class="turis-favorite" aria-label="Home"></md-icon>
+              </md-button> -->
+            <ion-rate style="" maximum="5" rate="2" color="color" select-star="selectedStar(rating,$index)"></ion-rate>
+              <!-- <md-button class="md-icon-button"  ng-click="share(pic.City, pic.Name , pic.Url)" aria-label="Favorite">
+                  <md-icon class="turis-share" aria-label="Home"></md-icon>
+              </md-button> -->
+            </div>
+            <md-button class="md-icon-button" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="Favorite">
+             <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
+          </md-button>
+          </md-card>
              <list-filters ></list-filters>
     </ion-content>
 </ion-view>

@@ -1,5 +1,5 @@
 angular.module('filters')
-.controller('displayFilters', function ($scope, filterService, $timeout, $ionicLoading, $http) {
+.controller('displayFilters', function ($scope, filterService, $timeout, $ionicLoading, $http, ionicMaterialInk, ionicMaterialMotion) {
 
        $scope._list = [];
        $scope.list = [];
@@ -8,7 +8,7 @@ angular.module('filters')
          populateLists();
      }
      $scope.canWeLoadMoreContent = function() {
-         return ($scope._list.length >= $scope.list.length-3) ? false : true;
+         return ($scope._list.length >= $scope.list.length) ? false : true;
      }
      populateLists();
 
@@ -31,6 +31,7 @@ angular.module('filters')
              }
              $scope.$broadcast('scroll.infiniteScrollComplete');
          });
+        $scope.$broadcast('scroll.refreshComplete'); //Checar si esta bien colocado aquí
      }
 
 
