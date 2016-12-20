@@ -1,7 +1,7 @@
 //Módulo de home
 // angular.module('home', ['ngMaterial','menufilters','filters','tabbar']);
 //Módulo de listado de IETR  con la inyección de menú
-angular.module('filters', ['ionRate']);
+angular.module('filters', ['ionRate','ngInfiniteScroll']);
 
 //Módulo de menu para el listado de IETR
 angular.module('menufilters',[]); 
@@ -29,5 +29,5 @@ angular.module('map', ['ngMap','ionRate']);
 // angular.module('histories',['ngMaterial','hm.readmore']);
 
 // angular.module('share', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
-
+angular.module('ngInfiniteScroll',[]);
 angular.module('carrousel',['ionRate']);
