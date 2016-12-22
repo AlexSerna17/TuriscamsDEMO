@@ -6,7 +6,7 @@
             <div style="width: 100%; position: absolute; z-index: 1; margin-top: 7px; margin-left: 7px;">
               <md-icon md-font-icon="turis-ietr" aria-label="type" style="color: #fff; font-size: 19px; margin-top: 3px;"></md-icon>
             </div>
-            <img ng-src="http://turiscams.com/v1/webcams/zacatecas/live.jpg" style="padding: 7px 5px 0px 7px;">
+            <img ng-src="{{imageURL}}" style="padding: 7px 5px 0px 7px;">
             <div style="width: 100%; z-index: 1; margin-top: -45px; text-align: center; padding: 0px 7px;">
                 <p style="color: #fff; margin:0; font-weight: bold; font-size: 18px;">Catedral de Zacatecas</p>
                 <p style="color: #fff; margin:0; font-size: 13px;">Vista del centro histórico de Zacatecass</p>
@@ -28,7 +28,7 @@
                 <label for="" style="font-size: 12px; text-transform: capitalize; color: #cacaca;">Reservar</label>
             </div>
           </md-card>
-
+          
              <list-filters ></list-filters>
     </ion-content>
 </ion-view>
