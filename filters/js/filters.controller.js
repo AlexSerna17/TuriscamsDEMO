@@ -1,9 +1,11 @@
 angular.module('filters')
-.controller('displayFilters', function ($scope, filterService, $timeout, $ionicLoading, $http, ionicMaterialInk, ionicMaterialMotion) {
+.controller('displayFilters', function ($scope, filterService, $timeout, $ionicLoading, $http) {
+
 
        $scope._list = [];
        $scope.list = [];
      var from = 0;
+     var adds = 0;
      $scope.populateList = function() {
          populateLists();
      }
@@ -14,12 +16,12 @@ angular.module('filters')
 
      function populateLists() {
          filterService.gestList("IETR").then(function(data){
+            console.log(data);
              $scope.list = Object.keys(data.cameras);
              var limit = from + 4;
              for (var i = from; i <= limit; i++) {
-                 console.log($scope.list[i]);
-                 // console.log(data.cameras[$scope.list[i]]["City"]);
                  $scope._list.push({
+                     attr: data.cameras[$scope.list[i]]["attr"],
                      Name: data.cameras[$scope.list[i]]["Name"],
                      City: data.cameras[$scope.list[i]]["City"],
                      State: data.cameras[$scope.list[i]]["State"],
