@@ -2,10 +2,10 @@
 angular.module('filters')
 
 .service('filterService', function($http){
+                      
+  this.gestList = function(kind){
 
-    this.gestList = function(kind){
-
-        return $http.get('https://patito-software.cloud.tyk.io/filters/'+kind).then(
+        return $http.get('http://turiscams.com/tkm/v1/pins/').then(
             function (response) {
                 return{
                     cameras:response.data,                    
@@ -13,6 +13,17 @@ angular.module('filters')
 
             });
     }
+
+    // this.gestList = function(kind){
+
+    //     return $http.get('https://patito-software.cloud.tyk.io/filters/'+kind).then(
+    //         function (response) {
+    //             return{
+    //                 cameras:response.data,                    
+    //             }
+
+    //         });
+    // }
 
 
     this.getMenu = function(){
