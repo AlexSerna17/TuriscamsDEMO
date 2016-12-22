@@ -34,11 +34,11 @@
  <ion-list class="col col-50" style="padding: 0px; margin-bottom: 49px;">
     <md-card  ng-repeat="pic in _list" ng-if="pic.Url != null && $even">
       <a href="home.html#/app/tmp">
-      <div class="shaw">
+      <div class="shaw" ng-if="pic.attr == null">
         <md-icon md-font-icon="turis-ietr" aria-label="type" style="color: #fff; font-size: 19px; margin-top: 3px;"></md-icon>
       </div>
       <img ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" ng-if="pic.attr == null" class="md-card-image" alt="{{pic.City}}, {{pic.State}}" style="height: {{pic.heigth}}px !important; padding: 7px 5px 0px 7px; object-fit: cover; width: 100%;">
-      <img ng-src="{{pic.Url}}" ng-if="pic.attr != null" class="md-card-image" alt="{{pic.City}}, {{pic.State}}" style="height: {{pic.heigth}}px !important; padding: 7px 5px 5px 7px; object-fit: cover;">
+      <img ng-src="{{pic.Url}}" ng-if="pic.attr != null" class="md-card-image" alt="{{pic.City}}, {{pic.State}}" style="height: {{pic.heigth}}px !important; padding: 7px 5px 5px 7px; object-fit: cover; width: 100%;">
       </a>
       <div ng-if="pic.attr == null" layout="column" layout-align="center center">
         <md-card-title>
