@@ -28,7 +28,9 @@ angular.module('ietr', [])
 
     refreshService.cameraData().success(function(ietrData){
 
-
+            $scope.name = ietrData.Name;
+            $scope.short = ietrData.Short_Description;
+            $scope.reservation = ietrData.Reference_Url_Mobile;
             $scope.imageURL = 'http://turiscams.com/v1/' + ietrData.Url + 'live.jpg'; 
 
             var c=0;
