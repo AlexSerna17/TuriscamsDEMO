@@ -1,7 +1,7 @@
-angular.module('map', ['ngMap'])
+angular.module('ietr', ['ngMap'])
 
 
-.service('mapService',function($http){
+.service('refreshService',function($http){
 
     this.markerData = function(){
 	
@@ -31,24 +31,32 @@ angular.module('map', ['ngMap'])
 })
 
 
-.controller('refreshCtrl', function ($scope,mapService,$timeout,$http) {
+.controller('refreshCtrl', function ($scope,mapService,$timeout,$http,$interval) {
 
-    $scope.imageURL = 'http://turiscams.com/v1/webcams/zacatecas/live.jpg'; 
+    $scope.imageURL = 'img/perfil.jpg'; 
 
-            $scope.getImage = function () {
-                $http.get($scope.imageURL, {
-                    cache: false
-                }).success(function (data, status, headers, config) {
-                    $scope.imageURL = 'http://turiscams.com/v1/webcams/zacatecas/live.jpg';
-                });
-            };
+         
+            var c=0;
+            $interval(function(){
+            $scope.imageURL = 'http://turiscams.com/v1/webcams/zacatecas/live.jpg' + '?' + c;
+            console.log(c);
+            c++
+            },5000); 
 
-            $scope.intervalFunction = function () {
-                $timeout(function () {
-                    $scope.getImage();
-                    $scope.intervalFunction();
-                }, 1500)
-            };
 
-            $scope.intervalFunction();
+
+
+            // $timeout(function () {
+            //         $scope.imageURL = 'http://turiscams.com/v1/webcams/zacatecas/live.jpg' + '?' + new Date().getTime();
+            //         // $scope.intervalFunction();
+            //     }, 1500);
+
+            // $scope.intervalFunction = function () {
+            //     $timeout(function () {
+            //         $scope.imageURL = 'http://turiscams.com/v1/webcams/zacatecas/live.jpg'; 
+            //         $scope.intervalFunction();
+            //     }, 1500)
+            // };
+
+            // $scope.intervalFunction();
 });
