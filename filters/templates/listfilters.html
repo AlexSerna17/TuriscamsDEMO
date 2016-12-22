@@ -31,8 +31,11 @@
   </div>
 </div> -->
 
- <ion-list class="col col-50" style="padding: 0px; margin-bottom: 50px;">
-    <md-card  ng-repeat="pic in _list" ng-if="pic.Url != null && $even"  layout="column" layout-align="center center">
+ <ion-list class="col col-50" style="padding: 0px; margin-bottom: 49px;">
+    <md-card  ng-repeat="pic in _list" ng-if="pic.Url != null && $even">
+      <div class="shaw">
+        <md-icon md-font-icon="turis-ietr" aria-label="type" style="color: #fff; font-size: 19px; margin-top: 3px;"></md-icon>
+      </div>
       <img ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" ng-if="pic.attr == null" class="md-card-image" alt="{{pic.City}}, {{pic.State}}" style="height: {{pic.heigth}}px !important; padding: 7px 5px 0px 7px; object-fit: cover;">
       <img ng-src="{{pic.Url}}" ng-if="pic.attr != null" class="md-card-image" alt="{{pic.City}}, {{pic.State}}" style="height: {{pic.heigth}}px !important; padding: 7px 5px 5px 7px; object-fit: cover;">
       <div ng-if="pic.attr == null" layout="column" layout-align="center center">
@@ -41,25 +44,28 @@
           {{pic.Name}}
             </md-card-title-text>
           </md-card-title>
-          <md-card-content class="md-card-content" style="padding: 0px 5px 5px 5px;">
+          <md-card-content class="md-card-content" style="padding: 0px 5px 0px 5px;">
             <p><strong>{{pic.City}}, {{pic.State}}</strong></p>
           </md-card-content>
 
-          <div layout="row" style="margin-bottom: -10px;"> 
+          <div layout="row" style="margin-bottom: -7px; display: inline-table;"> 
             <a class="button-icon icon turis-favoritelight icon-turis"></a>
             <ion-rate style="" maximum="5" rate="2" color="color" select-star="selectedStar(rating,$index)"></ion-rate>
             <a class="button-icon icon turis-shareios icon-turis" ng-click="share(pic.City, pic.Name , pic.Url)"></a>
           </div>
           <md-button class="" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="reservation" style="margin: 0px; margin-bottom: -8px;">
            <md-icon md-svg-icon="css/icons/reservations.svg" style="color: #294996;"></md-icon>
-           <p style="margin: -18px 0px 0px 0px !important; font-size: 12px; text-transform: capitalize;">Reservar</p>
+           <p style="margin: -18px 0px 0px 0px !important; font-size: 12px; text-transform: capitalize; color: #cacaca;">Reservar</p>
           </md-button>
       </div>
     </md-card>
 </ion-list>
 
- <ion-list class="col col-50" style="padding: 0px; margin-bottom: 50px;">
-    <md-card  ng-repeat="pic in _list" ng-if="pic.Url != null && $odd"  layout="column" layout-align="center center">
+ <ion-list class="col col-50" style="padding: 0px; margin-bottom: 49px;">
+    <md-card  ng-repeat="pic in _list" ng-if="pic.Url != null && $odd">
+      <div class="shaw">
+        <md-icon md-font-icon="turis-ietr" aria-label="type" style="color: #fff; font-size: 19px; margin-top: 3px;"></md-icon>
+      </div>
       <img ng-src="http://turiscams.com/v1/{{pic.Url}}/live.jpg" ng-if="pic.attr == null" class="md-card-image" alt="{{pic.City}}, {{pic.State}}" style="height: {{pic.heigth}}px !important; padding: 7px 5px 0px 7px; object-fit: cover;">
       <img ng-src="{{pic.Url}}" ng-if="pic.attr != null" class="md-card-image" alt="{{pic.City}}, {{pic.State}}" style="height: {{pic.heigth}}px !important; padding: 7px 5px 5px 7px; object-fit: cover;">
       <div ng-if="pic.attr == null" layout="column" layout-align="center center">
@@ -68,18 +74,18 @@
           {{pic.Name}}
             </md-card-title-text>
           </md-card-title>
-          <md-card-content class="md-card-content" style="padding: 0px 5px 5px 5px;">
+          <md-card-content class="md-card-content" style="padding: 0px 5px 0px 5px;">
             <p><strong>{{pic.City}}, {{pic.State}}</strong></p>
           </md-card-content>
 
-          <div layout="row" style="margin-bottom: -10px;"> 
+          <div layout="row" style="margin-bottom: -7px; display: inline-table;"> 
             <a class="button-icon icon turis-favoritelight icon-turis"></a>
             <ion-rate style="" maximum="5" rate="2" color="color" select-star="selectedStar(rating,$index)"></ion-rate>
             <a class="button-icon icon turis-shareios icon-turis" ng-click="share(pic.City, pic.Name , pic.Url)"></a>
           </div>
           <md-button class="" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="reservation" style="margin: 0px; margin-bottom: -8px;">
            <md-icon md-svg-icon="css/icons/reservations.svg" style="color: #294996;"></md-icon>
-           <p style="margin: -18px 0px 0px 0px !important; font-size: 12px; text-transform: capitalize;">Reservar</p>
+           <p style="margin: -18px 0px 0px 0px !important; font-size: 12px; text-transform: capitalize; color: #cacaca;">Reservar</p>
           </md-button>
       </div>
     </md-card>
@@ -158,7 +164,7 @@
   /*padding: 0 3px;*/
 }
 .ion-rating ul li i {
-  font-size: 20px;
+  font-size: 23px;
   color: #e26b19;
 }
 

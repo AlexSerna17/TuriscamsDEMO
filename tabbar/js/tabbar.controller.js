@@ -2,7 +2,8 @@ angular.module('tabbar')
 
 
 .controller('tabCtrl',function($scope){
-					    
+			
+	$scope.activeMenu = "Inicio";		    
 	$scope.menuItems = [
 	{
 		'tittle':'Inicio',
