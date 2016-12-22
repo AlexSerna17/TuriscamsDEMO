@@ -9,11 +9,13 @@
        
             <info-window id="myInfoWindow">
                 <div ng-non-bindable layout="row">
+                            <a href="home.html#/app/tmp" style="text-decoration: none; color: #000000;">
                     <img  ng-if="selectedCity.url != null" ng-src='http://turiscams.com/v1/{{selectedCity.url}}/live.jpg'  height='65'/> 
 
                     <div layout="column" style="margin-left: 10px;">
                         <div class="map-info-state">
                             {{selectedCity.name}}, {{selectedCity.state}}
+                            </a>
                         </div>
                         <div layout="column" class="map-info-description">
                             {{selectedCity.nameCamera}}

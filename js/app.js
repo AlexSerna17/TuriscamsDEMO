@@ -91,6 +91,16 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
+
+    .state('app.tmp', {
+        url: '/tmp',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/tmp.html',
+                // controller: 'ListsCtrl'
+            }
+        }
+    })
     ;
     
     // if none of the above states are matched, use this as the fallback
