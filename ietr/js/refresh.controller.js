@@ -1,54 +1,44 @@
-angular.module('map', ['ngMap'])
+angular.module('ietr', [])
 
+.service('refreshService',function($http){
 
-.service('mapService',function($http){
-
-    this.markerData = function(){
+    this.cameraData = function(){
 	
-	 var url = "http://turiscams.com/tkm/v1/map/marker/mobile";
+	 var url = "http://turiscams.com/tkm/v1/pins/single/57bb551c8b6c6b9a23dfe813";
 	
 			return $http({
 							
 							method : 'GET',
 							url : url
 							}).success(function(response){
-							
-							// Create a object to save retrivied user data and set in cookie.
-                          //  console.log(response['57bb551c8b6c6b9a23dfe813'].Geolocation.latitude);
-                            
-							// console.log( response);
+
 								return response;
 								
 							}).error(function(response){
 								
 
-
 							}); 
 							
 		
-							}
-	
+							}	
 })
 
 
-.controller('refreshCtrl', function ($scope,mapService,$timeout,$http) {
+.controller('refreshCtrl', function ($scope,refreshService,$interval) {
 
-    $scope.imageURL = 'http://turiscams.com/v1/webcams/zacatecas/live.jpg'; 
+    refreshService.cameraData().success(function(ietrData){
 
-            $scope.getImage = function () {
-                $http.get($scope.imageURL, {
-                    cache: false
-                }).success(function (data, status, headers, config) {
-                    $scope.imageURL = 'http://turiscams.com/v1/webcams/zacatecas/live.jpg';
-                });
-            };
 
-            $scope.intervalFunction = function () {
-                $timeout(function () {
-                    $scope.getImage();
-                    $scope.intervalFunction();
-                }, 1500)
-            };
+            $scope.imageURL = 'http://turiscams.com/v1/' + ietrData.Url + 'live.jpg'; 
 
-            $scope.intervalFunction();
+            var c=0;
+            $interval(function(){
+                $scope.imageURL = 'http://turiscams.com/v1/' + ietrData.Url + 'live.jpg' + '?' + c;
+                console.log(c);
+                c++
+            },5000); 
+
+
+    });
+
 });
