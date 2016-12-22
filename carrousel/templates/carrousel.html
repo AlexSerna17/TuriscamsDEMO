@@ -3,12 +3,12 @@
 <ion-scroll direction="x" class="carousel-map" >
     <div class="carousel-map-content" >
         <div class="carousel-map-img-content" data-ng-repeat="pic in pics">
-            <div class="carrousel-map-img-content-info">
-            	<ion-rate maximum="maximumRate" rate="pic.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>
-                <br><strong>{{pic.stateAcronym}}</strong>
-            </div>
             <img ng-src="http://turiscams.com/v1/{{pic.url}}/live.jpg" alt="">
         </div>
+         <div class="carrousel-map-img-content-info">
+              <ion-rate maximum="maximumRate" rate="pic.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>
+                <br><strong>{{pic.stateAcronym}}</strong>
+            </div>
     </div>
 </ion-scroll>
 	
