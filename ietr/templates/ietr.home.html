@@ -1,12 +1,14 @@
         <md-card class="md-card-ietr-home">
             <div class="icon-type-ietr-home">
               <md-icon md-font-icon="turis-ietr" aria-label="type"></md-icon>
-            </div><a href="home.html#/app/tmp">
-            <img ng-src="{{imageURL}}" >
+            </div>
+              <a href="home.html#/app/tmp">
+            <img ng-src="{{imageURL}}" onerror="this.src='img/underconstruction.png'">
             <div class="info-ietr-home">
                 <p class="info-place-ietr-home" >{{name}}</p>
                 <p class="info-description-ietr-home">{{short}}</p>
-            </div></a>
+             </a>
+            </div>
             <div layout="column" layout-align="center center">
               <md-card-title>
                   <md-card-title-text>
