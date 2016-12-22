@@ -16,13 +16,9 @@ list-filters{
     flex-direction: column;
     margin: 2.5px 2.5px 10px 2.5px !important;
     border-radius: 5px;
-    /*margin: 2.5px 2.5px 10px 2.5px!important;*/
-
-/*    padding: 5px 5px 0px 5px;*/
-    box-shadow: 0px 1px 5px 2px rgba(185,191,203,0.8) !important;
+    /*box-shadow: 0px 1px 5px 2px rgba(185,191,203,0.8) !important;*/
+    box-shadow: 0px 2px 8px 1px rgba(126,129,138,0.5) !important;
     
-   /* width: calc(97%/2);
-    float: left;*/
 }
 
 /*Tìtulo de la tarjeta*/
@@ -44,11 +40,13 @@ md-card .md-card-content{
   z-index: 2;
 }
 .shaw{
-  background-image: url(../images/shadow.png);
-  width: calc(50% - 19px);
-  height: 30px;
-  position: absolute;
-  z-index: 1;
+      background-image: url(../images/shadow.png);
+    width: calc(100% - 17px);
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 7px;
+    margin-left: 7px;
 }
 .info-content-AS{
     text-align: center;
