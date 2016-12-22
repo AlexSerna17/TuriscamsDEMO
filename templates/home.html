@@ -1,35 +1,10 @@
 <ion-view view-title="">
     <ion-content >
     	<ion-refresher pulling-text="Recargar" on-refresh="populateList()"></ion-refresher>
-    	
-    		  <md-card class="md-card-ietr-home">
-            <div class="icon-type-ietr-home">
-              <md-icon md-font-icon="turis-ietr" aria-label="type"></md-icon>
-            </div>
-            <img ng-src="{{imageURL}}" >
-            <div class="info-ietr-home">
-                <p class="info-place-ietr-home">Catedral de Zacatecas</p>
-                <p class="info-description-ietr-home">Vista del centro histórico de Zacatecass</p>
-            </div>
-            <div layout="column" layout-align="center center">
-              <md-card-title>
-                  <md-card-title-text>
-                   Imagen en tiempo real
-                  </md-card-title-text>
-                </md-card-title>
-                <div layout="row" class="options-ietr-mobile"> 
-                  <a class="button-icon icon turis-favoritelight icon-turis"></a>
-                  <ion-rate style="" maximum="5" rate="2" color="color" select-star="selectedStar(rating,$index)"></ion-rate>
-                  <a class="button-icon icon turis-shareios icon-turis" ng-click="share(pic.City, pic.Name , pic.Url)"></a>
-                </div>
-                <md-button ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="reservation" class="button-reservation-ietr-home">
-                 <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>  
-                </md-button>
-                <label for="" class="text-reservation-ietr-home">Reservar</label>
-            </div>
-          </md-card>
 
-             <list-filters ></list-filters>
+          <camera-home></camera-home>
+    		  <list-filters ></list-filters>
+    
     </ion-content>
 </ion-view>
 
