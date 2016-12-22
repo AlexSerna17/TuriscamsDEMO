@@ -16,7 +16,7 @@ angular.module('filters')
 
      function populateLists() {
          filterService.gestList("IETR").then(function(data){
-            console.log(data);
+            // console.log(data);
              $scope.list = Object.keys(data.cameras);
              var limit = from + 4;
              for (var i = from; i <= limit; i++) {

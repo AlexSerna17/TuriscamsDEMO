@@ -36,7 +36,7 @@ angular.module('ietr', [])
             var c=0;
             $interval(function(){
                 $scope.imageURL = 'http://turiscams.com/v1/' + ietrData.Url + 'live.jpg' + '?' + c;
-                console.log(c);
+                // console.log(c);
                 c++
             },5000); 
 
