@@ -18,12 +18,13 @@ list-filters{
     border-radius: 5px;
     /*box-shadow: 0px 1px 5px 2px rgba(185,191,203,0.8) !important;*/
     box-shadow: 0px 2px 8px 1px rgba(126,129,138,0.5) !important;
+
     
 }
 
 /*Tìtulo de la tarjeta*/
 md-card md-card-title {
-    padding: 5px 10px 0px !important; 
+    padding: 5px 5px 0px !important; 
     color: #9c9c9c !important;
     text-align: center !important;
     font-size: 12px !important;
@@ -42,7 +43,7 @@ md-card .md-card-content{
 .shaw{
       background-image: url(../images/shadow.png);
     width: calc(100% - 17px);
-    height: 30px;
+    height: 29px;
     position: absolute;
     z-index: 1;
     margin-top: 7px;
