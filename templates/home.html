@@ -2,8 +2,8 @@
     <ion-content >
     	<ion-refresher pulling-text="Recargar" on-refresh="populateList()"></ion-refresher>
     	
- <!--    		<md-card  layout="column" layout-align="center center">
-            <img ng-src="http://turiscams.com/v1/webcams/zacatecas/live.jpg" class="md-card-image" alt="{{pic.City}}, {{pic.State}}" style="height: {{pic.heigth}}px !important; padding: 7px 5px 0px 7px; object-fit: cover;">
+     		<md-card  layout="column" layout-align="center center">
+            <img ng-src="{{imageURL}}" class="md-card-image" alt="{{pic.City}}, {{pic.State}}" style="height: {{pic.heigth}}px !important; padding: 7px 5px 0px 7px; object-fit: cover;">
             <md-card-title>
               <md-card-title-text>
             	Imagen en tiempo real
@@ -22,7 +22,7 @@
             <md-button class="md-icon-button" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="Favorite">
              <md-icon md-svg-icon="css/icons/reservations.svg"></md-icon>
           </md-button>
-          </md-card> -->
+          </md-card> 
              <list-filters ></list-filters>
     </ion-content>
 </ion-view>

@@ -37,7 +37,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 templateUrl: 'templates/home.html',
                 controller: 'displayFilters',
                 controller: 'AppCtrl',
-                controller: 'userCtrl'
+                controller: 'userCtrl',
+                controller: 'refreshCtrl'
             }
         }
     })
