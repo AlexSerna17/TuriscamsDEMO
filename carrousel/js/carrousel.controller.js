@@ -6,7 +6,7 @@ angular.module('carrousel')
 		carrouselService.gestCameras()
 		.then(function(filtersData){
 			$scope.pics = filtersData.cameras;
-      		// console.log($scope.pics);
+      		console.log($scope.pics);
       		// console.log($scope.pics.name);
 			  $scope.selectedStar = function(rating, index) {
 			    console.log('Selected rating is : ', rating, ' and index is ', index);
