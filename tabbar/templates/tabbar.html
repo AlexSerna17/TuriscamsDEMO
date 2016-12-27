@@ -5,7 +5,7 @@
 
   <div class="tabs tabs-icon-top tabs-striped tabs-color-assertive" ng-controller="tabCtrl">
       <a class="tab-item" ng-repeat ="item in menuItems track by $index" ng-click="setActive(item.tittle)" nav-clear menu-close ng-href="{{item.url}}" ng-class="{active : activeMenu === item.tittle}">
-        <i class="icon {{item.icon}}" style="font-size: 22px; margin-top: 2px;"></i>
+        <i class="icon {{item.icon}}" on-double-tap="scrollTop()" style="font-size: 22px; margin-top: 2px;"></i>
         {{item.tittle}}
       </a>
   </div>

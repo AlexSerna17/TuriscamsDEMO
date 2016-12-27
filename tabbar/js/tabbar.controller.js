@@ -1,7 +1,11 @@
 angular.module('tabbar')
 
 
-.controller('tabCtrl',function($scope){
+.controller('tabCtrl',function($scope, $ionicScrollDelegate){
+
+	 $scope.scrollTop = function() {
+    	$ionicScrollDelegate.scrollTop([true]);
+  	 };
 			
 	$scope.activeMenu = "Inicio";		    
 	$scope.menuItems = [
