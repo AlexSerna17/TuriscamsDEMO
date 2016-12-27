@@ -9,7 +9,7 @@ angular.module('terms')
         return $http.get('http://turiscams.com/tkm/v1/terms_conditions/1').then(
             function (response) {
             	
-                console.log(response.data);
+                // console.log(response.data);
                 return response.data.text_terms;
             });
     }                         
