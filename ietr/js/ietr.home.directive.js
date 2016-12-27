@@ -7,4 +7,12 @@ angular.module('ietr')
 		controller: 'refreshCtrl',
 		controllerAs: 'ctrl'
 	}
+})
+.directive('cameraIetr', function () {
+	return {
+		restrict: 'E',
+		templateUrl: 'ietr/templates/ietr.ietr.html',
+		controller: 'refreshCtrl',
+		controllerAs: 'ctrl'
+	}
 });

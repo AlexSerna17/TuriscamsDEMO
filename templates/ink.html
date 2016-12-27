@@ -1,68 +1,102 @@
 ﻿
-<ion-view view-title="Get Ink'd">
+<ion-view view-title="">
     <ion-content>
-    <camera-home></camera-home>
-<!--         <h4>Ink Defaults</h4>
-        <p>
-            Invoke <strong class="balanced-900 bold balanced-100-bg">ionicMaterialInk.displayEffect();</strong> in a directive or controller to activate all ink-elements on the screen.
-        </p>
-        <p>
-            Once the displayEffect() has been called, elements containing the following classes will automatically contain ink when tapped: <strong>.button-fab</strong>, <strong>.button-flat</strong>, <strong>.button-raised</strong>, <strong>.button-clear</strong>, and <strong>.tab-item</strong>.
-        </p>
-        <h5 class="underline">Material Buttons Have Ink by Default</h5>
-        <p>
-            <button class="button button-flat button-calm">-flat</button>
-            <button class="button button-assertive button-clear">-clear</button>
-            <button class="button button-raised button-royal">-raised</button>
-            <br />
-            <br />
-            <button class="button button-fab button-balanced">-fab</button>
-        </p>
-        <h5 class="underline">...So do tabs!</h5>
-        <p>
-            <div class="tabs tabs-positive tabs-icon-only" style="position: static; margin-bottom: 15px;">
+    <camera-ietr></camera-ietr>
+    
+<!--     <div class="tabs tabs-icon-only" style="position: static; margin-bottom: 15px;">
                 <a class="tab-item active">
-                    <i class="icon ion-home"></i>
+                    Imagen en tiempo real
                 </a>
                 <a class="tab-item">
-                    <i class="icon ion-star"></i>
+                    Streaming
                 </a>
                 <a class="tab-item">
-                    <i class="icon ion-gear-a"></i>
+                    Time-Lapse
                 </a>
-            </div>
-        </p>
-        <h4>To Add Ink To Non-Defaults</h4>
-        <p>
-            Add the <strong>.ink</strong> class to non-inline elements.
-            <br />
-            <span style="display: inline-block; padding: 1rem;" class="ink" data-ink-color="#0066CC" data-ink-opacity=".6">
-                <i class="icon ion-waterdrop"></i>
-                Touch to see my ripples
-            </span>
-            <br />
-            <strong>Pro tip:</strong> Only use ink on elements that provide action.
-        </p>
-        <h4>For Dark Ink</h4>
-        <p>
-            Ink is by default, 40% opacity white. Add the <strong>.ink-dark</strong> class to change to 20% opacity black ink.
-        </p>
-        <button class="button button-raised button-assertive icon ion-flash ink-dark">Unleash the Dark Side</button>
-        <br />
-        <br />
-        <div class="code">&lt;button class="button button-fab button-balanced icon ion-leaf <strong class="balanced-900 bold balanced-100-bg">ink-dark</strong>"&gt;&lt;/button&gt;</div>
-        <br />
-        <h4>Any Colored Ink</h4>
-        <p>
-            Use <strong>data-ink-color</strong> with a hexadecimal color value and <strong>data-ink-opacity</strong> with a decimal for opacity.
-        </p>
-        <p>
-            <button class="button button-royal button-raised icon-right ion-ios-color-wand" data-ink-color="#CD3385" data-ink-opacity=".8">Activate Unicorn Juice</button>
-            <br />
-            <div class="code">&lt;button class="button button-royal button-raised icon-right ion-ios-color-wand" <strong class="balanced-900 bold balanced-100-bg">data-ink-color="#CD3385" data-ink-opacity=".8"</strong>&gt;&lt;/button&gt;</div>
-            <br />
-        </p>
-        <br />
-        <br /> -->
+                <a class="tab-item">
+                    Fotos de cámara
+                </a>
+            </div> -->
+
+
+
+
+
+
+    <md-tabs md-dynamic-height="" md-border-bottom="" md-center-tabs="true" md-dynamic-height="true" md-no-pagination="true" md-stretch-tabs="never" md-swipe-content="true">
+      <md-tab label="Imagen en tiempo real">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab One</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+        </md-content>
+      </md-tab>
+      <md-tab label="Streaming">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab Two</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+          <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        </md-content>
+      </md-tab>
+      <md-tab label="Time-Lapse">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab Three</h1>
+          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        </md-content>
+      </md-tab>
+       <md-tab label="Fotos de cámara">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab Three</h1>
+          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+
     </ion-content>
 </ion-view>
+
+<style>
+md-pagination-wrapper.md-center-tabs {
+    width: 100% !important;
+}
+md-tabs-canvas.md-center-tabs .md-tab {
+    float: left !important;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.md-tab {
+    width: 25%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+    padding: 0px 5px;
+    -webkit-transition: background-color .35s cubic-bezier(.35,0,.25,1);
+    transition: background-color .35s cubic-bezier(.35,0,.25,1);
+    cursor: pointer;
+    white-space: inherit;
+    position: relative;
+    text-transform: inherit;
+    float: left;
+    font-weight: 500;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+md-tab-item span{
+    vertical-align: middle;
+    height: 100%;
+
+}
+md-tabs .md-tab {
+    color: #294994;
+}
+md-tabs .md-tab.md-active{
+    color: #fe9600 ;
+}
+md-tabs md-ink-bar {
+    color: #fe9600 ;
+    background: #fe9600 ;
+}
+</style>
