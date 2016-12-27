@@ -19,7 +19,8 @@ angular.module('login')
 					user_id: response._id.$id,
 					email: response.email,
 					username: response.user_details.name,
-					profile_pic: response.user_details.profile_pic
+					profile_pic: response.user_details.profile_pic,
+					cover_pic: response.user_details.cover
 					
 				};
 				

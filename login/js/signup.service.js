@@ -17,7 +17,9 @@ angular.module('login')
 				method : 'POST',
 				url : url,
 				headers: { 'Content-Type': 'application/json'},
-				data: { email: email, password: password, user_details: {name: name, profile_pic: "../uploads/users_profile/default_profile_pic.jpg"} }
+				data: { email: email, password: password, user_details: {name: name, 
+					    profile_pic: "http://turiscams.com/uploads/profile.jpg",
+						cover: "http://turiscams.com/uploads/cover.jpg"} }
 
 				}).then(function successCallback(response){
 					
@@ -29,7 +31,8 @@ angular.module('login')
 					user_id: response.data.id,
 					email: response.data.email,
 					username: response.data.username,
-					profile_pic: response.data.profile_pic
+					profile_pic: response.data.profile_pic,
+					cover_pic: response.data.cover
 					
 				};
 				

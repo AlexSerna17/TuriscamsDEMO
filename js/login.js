@@ -76,15 +76,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         }
     })
 
-    .state('app.components', {
-        url: '/components',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/components.html',
-                // controller: 'ComponentsCtrl'
-            }
-        }
-    })
+    // .state('app.components', {
+    //     url: '/components',
+    //     views: {
+    //         'menuContent': {
+    //             templateUrl: 'templates/components.html',
+    //             // controller: 'ComponentsCtrl'
+    //         }
+    //     }
+    // })
 
     .state('app.extensions', {
         url: '/extensions',
