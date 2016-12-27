@@ -2,16 +2,64 @@
 
 <ion-scroll direction="x" class="carousel-map" >
     <div class="carousel-map-content" >
-        <div class="carousel-map-img-content" data-ng-repeat="pic in pics" >
+        <div class="carousel-map-img-content" data-ng-repeat="pic in pics" layout="column">
             <img ng-src="http://turiscams.com/v1/{{pic.url}}/live.jpg" alt="" ng-if="pic.url != null">
+            <ion-rate maximum="maximumRate" rate="pic.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>
+            <strong class="carrousel-map-img-content-info" style="text-shadow: 1px 1px 5px #000;">{{pic.name}}</strong>
         </div>
-         <div class="carrousel-map-img-content-info">
-              <ion-rate maximum="maximumRate" rate="pic.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>
-                <br><strong>{{pic.stateAcronym}}</strong>
-            </div>
     </div>
 </ion-scroll>
-	
+
+<br>
+<br>
+<br>
+<ion-scroll direction="x" class="carousel-map" style="height: 120px;" >
+    <div class="carousel-map-content">
+        <div class="carousel-map-img-content" data-ng-repeat="pic in pics" layout="column" style="height: 65%;">
+            <img ng-src="http://turiscams.com/v1/{{pic.url}}/live.jpg" alt="" ng-if="pic.url != null">
+            <ion-rate maximum="maximumRate" rate="pic.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>
+            <strong>{{pic.name}}</strong>
+        </div>
+    </div>
+</ion-scroll>
+
+<br>
+<br>
+<br>
+<ion-scroll direction="x" class="carousel-map" style="height: 120px;" >
+    <div class="carousel-map-content">
+        <div class="carousel-map-img-content" data-ng-repeat="pic in pics" layout="column" style="height: 65%;">
+            <img ng-src="http://turiscams.com/v1/{{pic.url}}/live.jpg" alt="" ng-if="pic.url != null">
+            <strong>{{pic.name}}</strong>
+            <ion-rate maximum="maximumRate" rate="pic.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>
+        </div>
+    </div>
+</ion-scroll>
+
+
+<br>
+<br>
+<br>
+<ion-scroll direction="x" class="carousel-map" >
+    <div class="carousel-map-content">
+        <div class="carousel-map-img-content" data-ng-repeat="pic in pics" layout="column" style="margin-right: 5px;">
+            <img ng-src="http://turiscams.com/v1/{{pic.url}}/live.jpg" alt="" ng-if="pic.url != null">
+            <div layout="row">
+              <ion-rate maximum="maximumRate" rate="pic.rating" color="color" select-star="selectedStar(rating,$index)" disabled="false"></ion-rate>
+              <strong>{{pic.stateAcronym}}</strong>
+            </div>
+            
+        </div>
+    </div>
+</ion-scroll>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 <style>
 	.ion-rating {
   display: inline-block;

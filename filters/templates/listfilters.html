@@ -55,7 +55,7 @@
             <ion-rate style="" maximum="5" rate="2" color="color" select-star="selectedStar(rating,$index)"></ion-rate>
             <a class="button-icon icon turis-shareios icon-turis" ng-click="share(pic.City, pic.Name , pic.Url)"></a>
           </div>
-          <md-button class="" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="reservation" style="margin: 0px; margin-bottom: -8px;">
+          <md-button class="" ng-click="openInAppBrowser(pic.Reference_Url_Mobile)" targert="_blank" aria-label="reservation" style="margin: 0px; margin-bottom: -8px;">
            <md-icon md-svg-icon="css/icons/reservations.svg" style="color: #294996;"></md-icon>  
           </md-button>
           <label for="" style="font-size: 12px; text-transform: capitalize; color: #cacaca;">Reservar</label>
@@ -87,13 +87,14 @@
             <ion-rate style="" maximum="5" rate="2" color="color" select-star="selectedStar(rating,$index)"></ion-rate>
             <a class="button-icon icon turis-shareios icon-turis" ng-click="share(pic.City, pic.Name , pic.Url)"></a>
           </div>
-          <md-button class="" ng-href="{{pic.Reference_Url_Mobile}}" targert="_blank" aria-label="reservation" style="margin: 0px; margin-bottom: -8px;">
+          <md-button class="" ng-click="openInAppBrowser(pic.Reference_Url_Mobile)" targert="_blank" aria-label="reservation" style="margin: 0px; margin-bottom: -8px;">
            <md-icon md-svg-icon="css/icons/reservations.svg" style="color: #294996;"></md-icon>  
           </md-button>
           <label for="" style="font-size: 12px; text-transform: capitalize; color: #cacaca;">Reservar</label>
       </div>
     </md-card>
 </ion-list>
+
 
 
 

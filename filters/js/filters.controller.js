@@ -102,6 +102,12 @@ angular.module('filters')
 
 
 
+$scope.openInAppBrowser = function(link){
+ window.open(link,'_blank','location=no'); 
+};
+ 
+
+
 
 
 

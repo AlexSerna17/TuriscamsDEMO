@@ -48,13 +48,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             'menuContent': {
                 templateUrl: 'templates/lists.html',
-                controller: 'ListsCtrl'
+                // controller: 'ListsCtrl'
             }
         }
     })
 
-    .state('app.ink', {
-        url: '/ink',
+    .state('app.ietr', {
+        url: '/ietr',
         views: {
             'menuContent': {
                 templateUrl: 'templates/ink.html',

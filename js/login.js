@@ -5,7 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('login', ['ngCookies','ionic', 'ionic-material', 'ngMaterial','ngMessages','validation.match','terms','facebook']);
 
-app.run(function ($ionicPlatform) {
+app.run(function ($ionicPlatform, $cookies) {
+
+    if($cookies.getObject('user_data')){
+        location.href = "home.html";
+    }
+
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
