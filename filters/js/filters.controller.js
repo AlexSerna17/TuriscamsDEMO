@@ -16,11 +16,13 @@ angular.module('filters')
 
      function populateLists() {
          filterService.gestList("IETR").then(function(data){
-            // console.log(data);
+            console.log(data);
              $scope.list = Object.keys(data.cameras);
+            //  console.log($scope.list);
              var limit = from + 4;
              for (var i = from; i <= limit; i++) {
                  $scope._list.push({
+                     cameraID: data.cameras[$scope.list[i]]["CameraID"],
                      attr: data.cameras[$scope.list[i]]["attr"],
                      Name: data.cameras[$scope.list[i]]["Name"],
                      City: data.cameras[$scope.list[i]]["City"],
@@ -30,6 +32,7 @@ angular.module('filters')
                      heigth: Math.random() * (300 - 200) + 200,
                  });
                  from = i;
+                //  console.log($scope._list);
              }
              $scope.$broadcast('scroll.infiniteScrollComplete');
          });

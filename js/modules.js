@@ -8,7 +8,7 @@ angular.module('menufilters',[]);
 // angular.module('menufilters',['ngAnimate', 'ngTouch']); 
 
 angular.module('facebook', ['ngCookies']);
-
+angular.module('ietr', []);
 // angular.module('weather',[]);
 
 // angular.module('terms', ['ngMaterial','ngMessages', 'ngAnimate', 'ngSanitize', 'ui.bootstrap']);
