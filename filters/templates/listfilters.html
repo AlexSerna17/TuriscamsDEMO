@@ -33,7 +33,7 @@
 
  <ion-list class="col col-50" style="padding: 0px; margin-bottom: 49px;">
     <md-card  ng-repeat="pic in _list" ng-if="pic.Url != null && $even">
-      <a href="home.html#/app/ietr">
+      <a ui-sref="app.ietr({ CameraID: pic.cameraID})">
       <div class="shaw" ng-if="pic.attr == null">
         <md-icon md-font-icon="turis-ietr" aria-label="type" style="color: #fff; font-size: 19px; margin-top: 3px;"></md-icon>
       </div>
@@ -65,7 +65,7 @@
 
  <ion-list class="col col-50" style="padding: 0px; margin-bottom: 49px;">
     <md-card  ng-repeat="pic in _list" ng-if="pic.Url != null && $odd">
-      <a href="home.html#/app/ietr">
+      <a ui-sref="app.ietr({ CameraID: pic.cameraID})">
       <div class="shaw" ng-if="pic.attr == null">
         <md-icon md-font-icon="turis-ietr" aria-label="type" style="color: #fff; font-size: 19px; margin-top: 3px;"></md-icon>
       </div>

@@ -8,8 +8,13 @@ angular.module('menufilters',[]);
 // angular.module('menufilters',['ngAnimate', 'ngTouch']); 
 
 angular.module('facebook', ['ngCookies']);
+<<<<<<< HEAD
 
 angular.module('weather', ['ionic']);
+=======
+angular.module('ietr', []);
+// angular.module('weather',[]);
+>>>>>>> 8c2f0daee82b2a99a4648aafbceb21268c50b924
 
 // angular.module('terms', ['ngMaterial','ngMessages', 'ngAnimate', 'ngSanitize', 'ui.bootstrap']);
 angular.module('terms',['ionic', 'ionic-material']);
