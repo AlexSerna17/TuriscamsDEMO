@@ -8,8 +8,9 @@
     <link rel="stylesheet" type="text/css" href="weather/css/weather.css"/>
 
 
-<div>
-  <ion-slide-box show-pager="false" ng-init="lockSlide()" style="position: relative;">
+ {{lat}}
+  {{long}}
+  <ion-slide-box show-pager="false" ng-init="weatherService(lat,long)" style="position: relative;">
     <ion-slide>
         <div class="container-actual-weather" layout="column" layout-align="center center" >
           <span style="color: #777777; font-weight: 500;">{{state}}, {{capital}} {{country}}</span>
@@ -59,7 +60,7 @@
       </ion-scroll>
     </ion-slide>
   </ion-slide-box>
-</div>
+
 
 
 

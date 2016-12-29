@@ -2,10 +2,12 @@ angular.module('weather')
 .controller('weatherCtrl', function ($scope, weatherService, $http, $ionicSlideBoxDelegate) {
 
 	$scope.weatherService = function(){
-		weatherService.getWeather()
+		weatherService.getWeather("22.7503118","-102.532292")
 		.then(function(weatherData){
       console.log(weatherData.weather);
       // $scope.pics = filtersData.cameras;
+      $scope.lat = $scope.lat || 22.7503118;
+      $scope.long = $scope.long || -102.532292;      
       $scope.country = weatherData.weather.currently.country.short_name;
       $scope.state = weatherData.weather.currently.administrative_area_level_2.short_name;
       $scope.capital = weatherData.weather.currently.administrative_area_level_1.short_name;
