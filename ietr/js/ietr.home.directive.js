@@ -12,7 +12,7 @@ angular.module('ietr')
 	return {
 		restrict: 'E',
 		templateUrl: 'ietr/templates/ietr.ietr.html',
-		controller: 'refreshCtrl',
+		controller: 'ietrCtrl',
 		controllerAs: 'ctrl'
 	}
 });

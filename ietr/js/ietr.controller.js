@@ -1,10 +1,10 @@
-angular.module('ietr', [])
+angular.module('ietr')
 
 .service('refreshService',function($http){
 
-    this.cameraData = function(){
+    this.cameraData = function(id){
 	
-	 var url = "http://turiscams.com/tkm/v1/pins/single/57bb551c8b6c6b9a23dfe813";
+	 var url = "http://turiscams.com/tkm/v1/pins/single/" + id;
 	
 			return $http({
 							
@@ -24,11 +24,12 @@ angular.module('ietr', [])
 })
 
 
-.controller('refreshCtrl', function ($scope,refreshService,$interval) {
+.controller('ietrCtrl', function ($scope,refreshService,$interval,$stateParams) {
+    $scope.id = $stateParams.CameraID;
+    console.log($scope.id);
 
-    refreshService.cameraData().success(function(ietrData){
-        
-            $scope.cameraID = ietrData._id.$id;
+    refreshService.cameraData($scope.id).success(function(ietrData){
+
             $scope.name = ietrData.Name;
             $scope.short = ietrData.Short_Description;
             $scope.reservation = ietrData.Reference_Url_Mobile;
@@ -43,5 +44,7 @@ angular.module('ietr', [])
 
 
     });
+
+
 
 });
