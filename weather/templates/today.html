@@ -1,0 +1,113 @@
+<!-- 
+    CreateDate: 
+    Empresa: TI Consulting
+    Created By: Francisco - Developer
+    Description: API de clima
+    Last Modification Date: José Alejandro Salas Serna, Directiva -->
+
+    <link rel="stylesheet" type="text/css" href="weather/css/weather.css"/>
+
+
+  
+<ion-slide-box show-pager="false" ng-init="lockSlide()">
+    <ion-slide>
+        <div style="height: 120px; width: 100%; background: #f0f0f0; text-align: center;" layout="column" layout-align="center center" >
+          <span style="color: #777777; font-weight: 500;">{{state}}, {{capital}} {{country}}</span>
+
+          <div layout="row" layout-align="space-between stretch" >
+
+
+              <div layout="column" layout-align="center center">
+                <div layout="row" layout-align="center center" >
+                  <div style="color: #656565; font-size: 25px;">Hoy</div>
+                  <img src="weather/images/{{icon}}.png" alt="" style="width: 55px; margin: 0px 5px;">
+                  <span style="color: #24a8fd; font-size: 25px;"> {{temperature}}&ordm;C</span>
+                </div>
+                <span style="color: #777777;">{{summary}}</span>
+              </div>
+              <div style="margin: 0px 15px;">
+                
+              </div>
+              <div layout="column"  layout-align="center end" style="color: #8c8c8c; line-height: 18px; font-size: 12px; text-align: -webkit-center;">
+                <span>Humedad: {{humidity}}%</span>
+                <span>Velocidad de viento: {{wind_speed}}Km/h</span>
+                <span>Amanecer: {{sunrise_time}}</span>
+                <span>Anochecer: {{sunset_time}}</span>
+              </div>
+          </div>
+        </div>
+        
+    </ion-slide>
+    <ion-slide>
+        <ion-scroll direction="xy" style=" background: #fff;  padding: 3px 0px 3px 3px;  height: 120px;" on-touch="mouseoverWideDiv()" on-release="mouseleaveWideDiv()" >
+          <div style="  width: max-content;  width: -moz-max-content;  width: -webkit-max-content;  height: 100%;  display: -webkit-box;" >
+              <div data-ng-repeat="hour in next_hours" style=" position: relative; height: 100%; text-align: center; margin-right: 3px; ">
+                  <img ng-src="weather/images/{{hour.icon}}.png" alt="" >
+              </div>
+          </div>
+      </ion-scroll>
+
+     <!--    <ion-scroll direction="x" style="height: 120px; width: 100%; background: #f0f0f0; text-align: center; " on-touch="mouseoverWideDiv()" on-release="mouseleaveWideDiv()">
+          <div class="" ng-repeat="hour in next_hours" style="width: max-content;  width: -moz-max-content;  width: -webkit-max-content;  height: 120px;  display: -webkit-box;">
+            <img src="../weather/images/{{hour.icon}}.png" alt=" ">
+            <div class="SS-weatherToday7-1">
+                {{hour.time}}
+                <br> 
+                {{hour.period}}
+            </div>
+            <div class="SS-weatherToday2-3-1a">
+                {{hour.temperature}}<span class="SS-weatherToday2-3-1-1a">&ordm;</span>
+                <span class="SS-weatherToday2-3-1-2a">C</span>
+            </div>
+        </div>
+         </ion-scroll> -->
+    </ion-slide>
+</ion-slide-box>
+
+
+
+
+<!-- <div class="SS-weatherScroll" >
+    <div class="SS-weatherContainer">           
+        <div class="SS-weatherToday">
+                <div class="SS-weatherToday1">{{state}}, {{capital}} {{country}}.</div>
+                <div class="SS-weatherToday2">
+                    <div class="SS-weatherToday2-1">Hoy</div>
+                    <div class="SS-weatherToday2-2">
+                      <img src="../weather/images/{{icon}}.png" alt=" ">
+                   </div>
+                   <div class="SS-weatherToday2-3">
+                    <div class="SS-weatherToday2-3-1">
+                       {{temperature}}<span class="SS-weatherToday2-3-1-1">&ordm;</span>
+                       <span class="SS-weatherToday2-3-1-2">C</span>
+                   </div>
+                   <div class="SS-weatherToday2-3-2">Humedad {{humidity}}%</div>
+               </div>
+           </div>
+           <div class="SS-weatherToday3">{{summary}}</div>
+           <div class="SS-weatherToday4">Velocidad de viento; {{wind_speed}}km/h</div>
+           <div class="SS-weatherToday5">Amanecer: {{sunrise_time}} - Anochecer {{sunset_time}}</div>
+       </div>
+
+       <div class="SS-weatherToday6">
+            <img src="../weather/images/{{icon}}.png" alt=" ">
+            <div class="SS-weatherToday6-1">Ahora</div>
+            <div class="SS-weatherToday2-3-1b">
+                {{temperature}}<span class="SS-weatherToday2-3-1-1a">&ordm;</span>
+                <span class="SS-weatherToday2-3-1-2a">C</span>
+            </div>
+        </div>
+
+        <div class="SS-weatherToday7" ng-repeat="hour in next_hours">
+            <img src="../weather/images/{{hour.icon}}.png" alt=" ">
+            <div class="SS-weatherToday7-1">
+                {{hour.time}}
+                <br> 
+                {{hour.period}}
+            </div>
+            <div class="SS-weatherToday2-3-1a">
+                {{hour.temperature}}<span class="SS-weatherToday2-3-1-1a">&ordm;</span>
+                <span class="SS-weatherToday2-3-1-2a">C</span>
+            </div>
+        </div>
+    </div> -->
