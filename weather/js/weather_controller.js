@@ -38,13 +38,13 @@ var weather = angular.module('weather', ['ionic']);
 			$scope.icon = $data.currently.icon;
 
 			$scope.next_hours = $data.next_hours;
-			// console.log(new Date().getHours());
-			// console.log(new Date().getMinutes());
-			// console.log(new Date().getSeconds());
-			// console.log($data.next_hours);
+			console.log(new Date().getHours());
+			console.log(new Date().getMinutes());
+			console.log(new Date().getSeconds());
+			console.log($data.next_hours);
 		
-			/*$scope = $data.currently.;
-			*/
+			$scope = $data.currently.;
+			
 		});
 
 	 

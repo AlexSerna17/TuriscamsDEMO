@@ -26,7 +26,7 @@ angular.module('ietr')
 
 .controller('ietrCtrl', function ($scope,refresh_ietrService,$interval,$stateParams) {
     $scope.id = $stateParams.CameraID;
-    console.log($scope.id);
+    // console.log($scope.id);
 
     refresh_ietrService.cameraData($scope.id).success(function(ietrData){
 
@@ -38,7 +38,7 @@ angular.module('ietr')
             var c=0;
             $interval(function(){
                 $scope.imageURL = 'http://turiscams.com/v1/' + ietrData.Url + 'live.jpg' + '?' + c;
-                console.log('Refresh en ietr: ' + c);
+                // console.log('Refresh en ietr: ' + c);
                 c++
             },5000); 
 

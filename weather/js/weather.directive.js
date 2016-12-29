@@ -4,7 +4,7 @@ angular.module('weather')
 	return {
 		restrict: 'E',
 		templateUrl: 'weather/templates/today.html',
-		controller: 'displayMenu',
+		controller: 'weatherCtrl',
 		controllerAs: 'ctrl'
 	}
 });
