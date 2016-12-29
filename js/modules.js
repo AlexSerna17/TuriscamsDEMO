@@ -9,7 +9,7 @@ angular.module('menufilters',[]);
 
 angular.module('facebook', ['ngCookies']);
 
-// angular.module('weather',[]);
+angular.module('weather', ['ionic']);
 
 // angular.module('terms', ['ngMaterial','ngMessages', 'ngAnimate', 'ngSanitize', 'ui.bootstrap']);
 angular.module('terms',['ionic', 'ionic-material']);

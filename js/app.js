@@ -58,7 +58,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             'menuContent': {
                 templateUrl: 'templates/ink.html',
-                controller: 'InkCtrl'
+                controller: 'InkCtrl',
             }
         }
     })
