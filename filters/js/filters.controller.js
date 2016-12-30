@@ -16,7 +16,7 @@ angular.module('filters')
 
      function populateLists() {
          filterService.gestList("IETR").then(function(data){
-            console.log(data);
+            // console.log(data);
              $scope.list = Object.keys(data.cameras);
             //  console.log($scope.list);
              var limit = from + 4;
@@ -28,6 +28,8 @@ angular.module('filters')
                      City: data.cameras[$scope.list[i]]["City"],
                      State: data.cameras[$scope.list[i]]["State"],
                      Url: data.cameras[$scope.list[i]]["Url"],
+                     longitude: data.cameras[$scope.list[i]]["longitude"],
+                     latitude: data.cameras[$scope.list[i]]["latitude"],
                      Reference_Url_Mobile: data.cameras[$scope.list[i]]["Reference_Url_Mobile"],
                      heigth: Math.random() * (300 - 200) + 200,
                  });

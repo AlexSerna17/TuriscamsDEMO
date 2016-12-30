@@ -17,8 +17,8 @@ var weather = angular.module('weather', ['ionic']);
 
     
 
-		$scope.latitude = "22.7503118";
-		$scope.longitude = "-102.532292";
+		// $scope.latitude = "22.7503118";
+		// $scope.longitude = "-102.532292";
 
 		$http.get("http://turiscams.com/tkm/v1/weather/" + $scope.latitude +"/"+  $scope.longitude ).then(function(response) {
 			//$scope.content = response.status;

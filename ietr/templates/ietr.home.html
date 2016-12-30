@@ -2,7 +2,7 @@
       <div class="icon-type-ietr-home">
         <md-icon md-font-icon="turis-ietr" aria-label="type"></md-icon>
       </div>
-        <a ui-sref="app.ietr({ CameraID: cameraID})">
+        <a ui-sref="app.ietr({ CameraID: cameraID,lon: longitude, lat: latitude})">
       <img ng-src="{{imageURL}}" onerror="this.src='img/underconstruction.png'">
       <div class="info-ietr-home">
           <p class="info-place-ietr-home" >{{name}}</p>

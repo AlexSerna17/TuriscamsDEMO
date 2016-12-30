@@ -27,8 +27,10 @@ angular.module('ietr')
 .controller('refreshCtrl', function ($scope,refreshService,$interval) {
 
     refreshService.cameraData().success(function(ietrData){
-        
+
             $scope.cameraID = ietrData._id.$id;
+            $scope.longitude = ietrData.Geolocation.longitude;
+            $scope.latitude = ietrData.Geolocation.latitude;
             $scope.name = ietrData.Name;
             $scope.short = ietrData.Short_Description;
             $scope.reservation = ietrData.Reference_Url_Mobile;

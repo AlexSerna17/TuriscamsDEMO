@@ -54,7 +54,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     })
 
     .state('app.ietr', {
-        url: '/ietr/:CameraID',
+        url: '/ietr/:CameraID/:lon/:lat',
         views: {
             'menuContent': {
                 templateUrl: 'templates/ink.html',
