@@ -34,7 +34,7 @@ angular.module('filters')
                      heigth: Math.random() * (300 - 200) + 200,
                  });
                  from = i;
-                 console.log($scope._list);
+                //  console.log($scope._list);
              }
              $scope.$broadcast('scroll.infiniteScrollComplete');
          });
