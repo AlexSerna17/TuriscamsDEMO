@@ -30,6 +30,20 @@ angular.module('weather')
 
 	};
 
+  $scope.mouseoverWideDiv = function() {
+        $ionicSlideBoxDelegate.enableSlide(false);
+    };
+
+    $scope.mouseleaveWideDiv = function() {
+        $ionicSlideBoxDelegate.enableSlide(true);
+    };
+    $scope.nextSlide = function() {
+       $ionicSlideBoxDelegate.next();
+    };
+    $scope.previusSlide = function() {
+       $ionicSlideBoxDelegate.previous();
+    };
+
 
 	$scope.weatherService();
 });
